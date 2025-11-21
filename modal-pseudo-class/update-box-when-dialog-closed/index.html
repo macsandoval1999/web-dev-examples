@@ -1,0 +1,48 @@
+<!-- Key Takeaways 
+- The `dialog` element can be used to create modal dialogs.
+
+- The `:modal` pseudo-class allows for styling of modal dialogs when they are open with showModal().
+
+- Forms with method="dialog" automatically close the dialog on submission.
+
+- JavaScript can be used to dynamically update content within the dialog before displaying it.
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Basic modal dialog containing a form -->
+    <dialog id="favDialog">
+        <form method="dialog">
+            <p>
+                <label>Favorite animal:
+                    <select>
+                        <option value="default">Choose…</option>
+                        <option>Brine shrimp</option>
+                        <option>Red panda</option>
+                        <option>Spider monkey</option>
+                    </select>
+                </label>
+            </p>
+            <div>
+                <button value="cancel">Cancel</button>
+                <button id="confirmBtn" value="default">Confirm</button>
+            </div>
+        </form>
+    </dialog>
+    <p>
+        <button id="updateDetails">Update details</button>
+    </p>
+    <output></output>
+
+</body>
+</html>

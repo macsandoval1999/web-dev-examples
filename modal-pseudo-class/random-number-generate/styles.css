@@ -1,0 +1,17 @@
+button {
+    display: block;
+    margin: auto;
+    width: 10rem;
+    height: 2rem;
+}
+
+/* Styles the dialog when it is open. :modal is mainly used for styling modal dialogs when they are displayed modally which implies that it was opened in JavaScript using showModal(). This only makes sense to do if you want to style modal dialogs differently from non-modal dialogs like one that opens at the initial load of the screen (opened with the open attribute in html)*/
+:modal {
+    background-color: beige;
+    border: 2px solid burlywood;
+    border-radius: 5px;
+}
+
+p {
+    color: black;
+}
