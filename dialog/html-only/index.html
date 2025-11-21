@@ -1,0 +1,25 @@
+<!-- KEY TAKEAWAYS:
+    Open Attribute: The open attribute on the <dialog> element makes the dialog visible when the page loads.
+        
+    Dialog Form Method: The method="dialog" attribute in the <form> element allows the
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Because of the open attribute, the dialog is visible at the start -->
+    <dialog open>
+        <p>Greetings, one and all!</p>
+        <!-- The dialog can be closed by clicking the "OK" button because the method attribute in the <form> element is set to "dialog". In this case, no JavaScript is needed to close the form. -->
+        <form method="dialog">
+            <button>OK</button>
+        </form>
+    </dialog>
+</body>
+</html>

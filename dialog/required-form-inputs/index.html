@@ -1,0 +1,45 @@
+<!-- KEY TAKEAWAYS:
+    Required Form Inputs: The required attribute on form inputs ensures that users must fill out those fields before submitting the form.
+
+    Formmethod="dialog" on Form: Placing method="dialog" on the form element allows the form to close the dialog and set its returnValue when submitted.
+
+    Bypassing Validation: The formnovalidate attribute on a submit button allows the form to be submitted without triggering validation, enabling alternative ways to close the dialog.
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <dialog id="dialog">
+        <!-- Before, we saw how to use the formmethod="dialog" attribute to close a dialog and set its returnValue through a button inside the dialog. Here, we explore how to handle required form inputs and different ways to close the dialog by putting method="dialog" on the form element. This allows the form to close the dialog and set the returnValue when submitted. -->
+        <form method="dialog">
+            <p>
+                <label>
+                    Favorite animal:
+                    <!-- The required attribute ensures that the input must be filled out before the form can be submitted -->
+                    <input type="text" required />
+                </label>
+            </p>
+            <div>
+                <!-- The normal close button submits the form normally, triggering validation -->
+                <input type="submit" id="normal-close" value="Normal close" />
+                <!-- The novalidate close button submits the form without validation. The formnovalidate attribute disables validation for this submission -->
+                <input type="submit" id="novalidate-close" value="Novalidate close" formnovalidate />
+                <!-- The JS close button is handled via JavaScript to close the dialog -->
+                <input type="submit" id="js-close" value="JS close" />
+            </div>
+        </form>
+    </dialog>
+    <p>
+        <button id="show-dialog">Show the dialog</button>
+    </p>
+    <output></output>
+</body>
+</html>

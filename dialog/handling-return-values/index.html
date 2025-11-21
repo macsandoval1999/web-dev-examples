@@ -1,0 +1,48 @@
+<!-- KEY TAKEAWAYS:
+    Handling Return Values: The returnValue property of a dialog can be set to indicate how the dialog was closed, which can be useful for determining user actions.
+
+    Formmethod="dialog": The formmethod="dialog" attribute on a button inside a dialog form allows the button to close the dialog without submitting the form, setting the dialog's returnValue.
+
+    Accessing Return Values: After a dialog is closed, its returnValue property can be accessed via JavaScript to determine the outcome of the dialog interaction.
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- A modal dialog containing a form -->
+    <dialog id="favDialog">
+        <form>
+            <p>
+                <label>
+                    Favorite animal:
+                    <select>
+                        <option value="default">Choose…</option>
+                        <option>Brine shrimp</option>
+                        <option>Red panda</option>
+                        <option>Spider monkey</option>
+                    </select>
+                </label>
+            </p>
+            <div>
+                <!-- The Cancel button closes the dialog without submitting the form thanks to the formmethod="dialog" attribute -->
+                <button value="cancel" formmethod="dialog">Cancel</button>
+                <!-- The Confirm button submits the form normally. The value attribute sets the returnValue property of the dialog. In this example, it is set to "default" which means the dialog will close with a returnValue of "default" if this button is clicked -->
+                <button id="confirmBtn" value="default">Confirm</button>
+            </div>
+        </form>
+    </dialog>
+    <p>
+        <!-- The "Show the dialog" button opens the dialog modally -->
+        <button id="showDialog">Show the dialog</button>
+    </p>
+    <output></output>
+</body>
+</html>

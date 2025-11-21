@@ -1,0 +1,67 @@
+<!-- KEY TAKEAWAYS:
+    Different Close Behaviors for Dialogs: The closedby attribute on dialogs controls how they can be closed, such as only by a button, by the Esc key, or by clicking outside.
+
+    none: The dialog can only be closed using a specific provided mechanism (like a button inside it).
+    closerequest: The dialog can be closed using the provided mechanism or the Esc key.
+    any: The dialog can be closed using the provided mechanism, the Esc key, or by
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <p>Choose a <code>&lt;dialog&gt;</code> type to show:</p>
+    <!-- For this example, we demonstrate different close behaviors for dialogs. Here we explore how dialogs can be closed using different mechanisms such as buttons, the Esc key, or clicking outside the dialog.  -->
+
+    <div id="controls">
+        <!-- ********BUTTONS******** -->
+        <!-- This button shows the dialog that can only be closed using the "Close" button inside it -->
+        <button id="none-btn"><code>closedby="none"</code></button>
+        
+        <!-- This button shows the dialog that can be closed using the "Close" button or the Esc key -->
+        <button id="closerequest-btn">
+            <code>closedby="closerequest"</code>
+        </button>
+
+        <!-- This button shows the dialog that can be closed using the "Close" button, the Esc key, or by clicking outside the dialog -->
+        <button id="any-btn"><code>closedby="any"</code></button>
+    </div>
+    
+
+    
+    <!-- ********DIALOGS******** -->
+    <!-- Using the closedby attribute to control how the dialog can be closed, we demonstrate different close behaviors for dialogs. -->
+
+    <!-- This dialog can only be closed using the "Close" button inside it. The value "none" means no other methods like Esc key or clicking outside will close it. -->
+    <dialog closedby="none">
+        <h2><code>closedby="none"</code></h2>
+        <p>
+            Only closable using a specific provided mechanism, which in this case is
+            pressing the "Close" button below.
+        </p>
+        <button class="close">Close</button>
+    </dialog>
+    <!-- This dialog can be closed using the "Close" button or the Esc key. The value "closerequest" means these two methods are allowed. -->
+    <dialog closedby="closerequest">
+        <h2><code>closedby="closerequest"</code></h2>
+        <p>Closable using the "Close" button or the Esc key.</p>
+        <button class="close">Close</button>
+    </dialog>
+    <!-- This dialog can be closed using the "Close" button, the Esc key, or by clicking outside the dialog. The value "any" means all these methods are allowed. -->
+    <dialog closedby="any">
+        <h2><code>closedby="any"</code></h2>
+        <p>
+            Closable using the "Close" button, the Esc key, or by clicking outside the
+            dialog. "Light dismiss" behavior.
+        </p>
+        <button class="close">Close</button>
+    </dialog>
+</body>
+</html>

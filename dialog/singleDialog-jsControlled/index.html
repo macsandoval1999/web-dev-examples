@@ -1,0 +1,27 @@
+<!-- KEY TAKEAWAYS:
+    autofocus Attribute: The autofocus attribute on a button inside a dialog ensures that the button is focused when the dialog opens.
+
+    Backdrop Styling: The ::backdrop pseudo-element allows you to style the backdrop of a modal dialog, enabling effects like gradients and opacity.
+    
+    Dialog Control with JavaScript: The showModal() and close() methods of the <dialog> element can be used to programmatically open and close the dialog.
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <dialog>
+        <button autofocus>Close</button>
+        <p>This modal dialog has a groovy backdrop!</p>
+    </dialog>
+    <button>Show the dialog</button>
+</body>
+</html>
