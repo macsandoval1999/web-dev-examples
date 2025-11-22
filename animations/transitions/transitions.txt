@@ -1,0 +1,13 @@
+Similar to the animation property, there are a number of rules for transitions that can be defined for each transition sub-property or all at once using the shorthand transition property.
+
+The following transtition properties are available:
+
+transition-property: Specifies the CSS property or properties that should transition when they change.
+
+transition-duration: Defines how long the transition takes to complete.
+
+transition-timing-function: Controls the speed curve of the transition, such as ease, linear, ease-in-out.
+
+transition-delay: Sets how long to wait before starting the transition after a property change.
+
+transition: A shorthand property for all the transition properties.

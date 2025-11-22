@@ -1,0 +1,35 @@
+.parent {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px;
+    background-color: lightgray;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    transform: rotate(15deg) translateX(20px) scale(1.2);
+    /* In this example, we rotate the parent by 15 degrees,
+       translate it 20 pixels to the right, and scale it by 1.2 times. Because the transform property affects the entire element, including its children, all child elements will be rotated, translated, and scaled along with the parent. 
+       Also, because the transform property is in the element and not a psuedo such as hover, it will make this part of the element transformed at all times */
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    margin: 50px auto;
+    transition: all 0.5s ease;
+    /* This transition property will make any changes to the box's properties (like transform) animate smoothly over 0.5 seconds with an ease timing function */
+}
+
+.box:hover {
+    transform: rotate(360deg) translateX(20px) translateY(50px) scale(3);
+    transition: all 0.5s ease;
+    /* In this example, when the user hovers over the box, it will rotate 360 degrees, move 20 pixels to the right and 50 pixels down, and scale up to 3 times its original size. The transition property ensures that these changes happen smoothly over 0.5 seconds */
+}

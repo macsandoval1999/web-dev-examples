@@ -1,0 +1,53 @@
+@keyframes fadeColor {
+
+    /*Fade in and out colors animtion*/
+    0% {
+        background-color: red;
+    }
+
+    50% {
+        background-color: yellow;
+    }
+
+    100% {
+        background-color: green;
+    }
+}
+
+@keyframes fadeIn {
+
+    /*Fade in animation*/
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Here we apply the animations to the parent div */
+.parent {
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeColor 5s infinite alternate, fadeIn 3s ease-in forwards;
+    /* The first animation we are saying to use is fadeColor which will last 5 seconds, loop infinitely, and alternate direction each time.
+       The second animation is fadeIn which will last 3 seconds, ease in, and run forwards only once. */
+    /* Note: Multiple animations are separated by commas */
+
+    /* For single animations, we could just specify one animation and each rule individually like below:
+    
+    .parent {
+        ...
+        animation-name: fadeColor;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    */
+}

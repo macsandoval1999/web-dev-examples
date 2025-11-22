@@ -1,0 +1,17 @@
+The animation can be defined directly through the animation shorcut property, or by specifying any of its sub-properties directly:
+
+animation-name: Specifies the name of the @keyframes animation to apply to the element.
+
+animation-duration: Defines how long the animation takes to complete one cycle.
+
+animation-timing-function: Controls the speed curve of the animation, such as linear or ease-in.
+
+animation-delay: Sets how long to wait before the animation starts.
+
+animation-iteration-count: Specifies how many times the animation should repeat.
+
+animation-direction: Determines whether the animation should play forward, backward, or alternate directions.
+
+animation-fill-mode: Defines how styles are applied before and after the animation runs.
+
+animation: A shorthand property to specificy several animation sub-properties all at once:

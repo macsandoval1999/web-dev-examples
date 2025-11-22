@@ -1,0 +1,36 @@
+@keyframes declares an animation, the name of the animation is then given which can be whatever name you want.
+The @keyframes rule in CSS defines the steps of an animation, specifying how an element's styles should change over time.
+
+You use @keyframes to create an animation by naming it and defining what should happen at different points (called keyframes) during the animation's timeline, such as at 0%, 50%, or 100%.
+
+
+    @keyframes fadeIn { /* using from/to syntax */
+        from { /* starting state */
+            opacity: 0; /* fully transparent */
+        }
+        to { /* Completed state */
+            opacity: 1; /* fully opaque */
+        }
+    }
+
+or 
+
+    @keyframes fadeIn { /* using percentage syntax */
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+You apply the animation to an element like this by referencing the name you gave it in the @keyframes declaration. With 2 seconds duration and ease-in timing function, this means the element will fade in over 2 seconds with an ease-in effect.
+    .parent {
+        animation: fadeIn 2s ease-in;
+    }
+
+You can also add delay and iteration count like this:
+    .parent {
+        animation: fadeIn 2s ease-in 1s 3; /* 1s delay before start, 3 iterations */
+    }
+The animation declaration above shows some of the  many animation rules you can apply. For more on animation rules, please check the animation folder in animations.

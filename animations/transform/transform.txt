@@ -1,0 +1,11 @@
+The CSS transform property allows you to apply 2D or 3D transformations to an element.
+
+Common transform functions include:
+
+translate(x, y): Moves the element left/right (x) and up/down (y).
+
+rotate(angle): Rotates the element by a specified angle (for example, rotate(45deg)).
+
+scale(x, y): Resizes the element (for example, scale(1.5) makes it 150% larger).
+
+skew(x-angle, y-angle): Skews the element along the x or y axis.

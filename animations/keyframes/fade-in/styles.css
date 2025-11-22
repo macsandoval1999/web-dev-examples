@@ -1,0 +1,43 @@
+/* To make a fade-in animation, you start with an element fully transparent and gradually make it fully opaque. Below we are saying when the animation is 0% complete, the element should be fully transparent. As it progresses to 100%, the element becomes fully opaque. 
+@keyframes declares an animation, the name of the animation is then given which can be whatever name you want.*/
+
+@keyframes fadeIn {
+
+    /* using from/to syntax */
+    from {
+        /* starting state */
+        opacity: 0;
+        /* fully transparent */
+    }
+
+    to {
+        opacity: 1;
+        /* fully opaque */
+    }
+}
+
+/* or */
+
+@keyframes fadeIn {
+
+    /* using percentage syntax */
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* You apply the animation to an element like this by referencing the name you gave it in the @keyframes declaration. With 2 seconds duration and ease-in timing function, this means the element will fade in over 2 seconds with an ease-in effect.*/
+
+.parent {
+    animation: fadeIn 2s ease-in;
+}
+
+/* You can also add delay and iteration count like this: */
+.parent {
+    animation: fadeIn 2s ease-in 1s 3;
+    /* 1s delay before start, 3 iterations */
+}

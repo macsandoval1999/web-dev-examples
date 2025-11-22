@@ -1,0 +1,43 @@
+/* Example 1 */
+.parent {
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid black;
+    color: black;
+    padding: 20px;
+    background-color: lightgray;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* In this example, we are transitioning the background-color and color properties
+       over a duration of 0.3 seconds with an 'ease' timing function. After the hover state, the transition properties here will apply*/
+}
+
+.parent:hover {
+    background-color: black;
+    color: white;
+
+    transition: background-color 0.1s ease, color 0.1s ease;
+    /* In this hover state, we change the background-color and color properties.
+       The transition properties here will apply when the element is hovered over,
+       making the transition faster (0.1 seconds) than the default state. */
+}
+
+
+
+/* Example 2 */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin-top: 20px;
+
+    transition: width 0.3s ease, height 1s ease;
+    /* In this example, we are transitioning the width and height properties
+       over different durations with an 'ease' timing function.  */
+}
+
+.box:hover {
+    width: 500px;
+    height: 200px;
+    /* On hover, the width will transition over 0.3 seconds and the height over 1 second */
+}
