@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* **********Animations********** */
+/* Keyframe animations for various effects */
+@keyframes spin {
+
+    /* Rotating Animation */
+    0% {
+        /* Starting state */
+        transform: rotate(0deg);
+        /* No rotation */
+    }
+
+    100% {
+        /* Ending state */
+        transform: rotate(360deg);
+        /* Full rotation */
+    }
+}
+
+@keyframes fadeInOut {
+
+    /* Fading Animation */
+    0%,
+    100% {
+        /* Starting and ending state */
+        opacity: 1;
+        /* Fully visible */
+    }
+
+    50% {
+        /* Midway state */
+        opacity: 0.3;
+        /* Partially transparent */
+    }
+}
+
+@keyframes pulse {
+
+    /* Glowing Animation */
+    0%,
+    100% {
+        /* Starting and ending state */
+        box-shadow: 0 0 1rem rgb(0 0 255 / 40%);
+        /* low shadow effect */
+    }
+
+    50% {
+        /* Midway state */
+        box-shadow: 0 0 2rem rgb(0 0 255 / 80%);
+        /* intense shadow effect */
+    }
+}
+
+@keyframes scaleInOut {
+
+    /* Zooming Animation */
+    0%,
+    100% {
+        /* Starting and ending state */
+        transform: translate(-50%, -50%) scale(1);
+        /* translate to center as it scales to normal size */
+    }
+
+    50% {
+        /* Midway state */
+        transform: translate(-50%, -50%) scale(1.5);
+        /* translate to center as it scales to zoomed in size */
+    }
+}
+
+
+
+/* ******************Infinite Animated Example****************** */
+/* Loader with rotating gear icon that appears on hover. Here we use infinite looping animations. We use keyframe animations for continuous effects. Transitions don't really apply in these cases. */
+#loader {
+    margin: 2rem;
+    width: 50px;
+    height: 50px;
+    border: 5px solid transparent;
+    border-color: #999 transparent #999 transparent;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite, pulse 2s ease-in-out infinite;
+    /* Rotating and glowing animation. linear means constant speed, ease-in-out means slow start and end */
+    box-shadow: 0 0 1rem rgb(0 0 255 / 40%);
+    position: relative;
+    /* For positioning the pseudo-element. In this case the gear icon which we position absolutely */
+}
+
+#loader::after {
+    content: "⚙️";
+    position: absolute;
+    /* Positioning the gear icon absolutely within the loader */
+    top: 50%;
+    /* Centering vertically */
+    left: 50%;
+    /* Centering horizontally */
+    transform: translate(-50%, -50%);
+    /* Adjusting position to be exactly centered. This is for when the gear icon scales back to normal size */
+    animation: fadeInOut 1.5s ease-in-out infinite, scaleInOut 2s ease-in-out infinite;
+    /* Fading and zooming animation. Remember, ease-in-out means slow start and end */
+    line-height: 1;
+    /* We had to set line-height to 1 to prevent extra space below the gear icon */
+}
+
+
+
+/* ************************** Timed Animated example ************************** */
+/* This example uses hover to trigger the animation instead of infinite looping.
+   When the user hovers over the loader, it will rotate and glow, and the gear icon will scale up.
+   When the user stops hovering, it will return to its original state.
+   Here we use transitions instead of keyframe animations for smoother control over the hover effect. */
+#loader-t {
+    margin: 2rem;
+    width: 50px;
+    height: 50px;
+    border: 5px solid transparent;
+    border-color: #999 transparent #999 transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 1rem rgb(255 0 0 / 40%);
+    transform: rotate(0deg);
+    /* Initial state, this is for when the gear icon is not rotated when hovered*/
+    transition: transform 1.5s ease-in-out, box-shadow 1.5s ease-in-out;
+    /* Transition for rotation and box-shadow when hovered */
+    position: relative;
+    /* For positioning the pseudo-element. In this case the gear icon which we position absolutely */
+}
+
+#loader-t::after {
+    content: "⚙️";
+    position: absolute;
+    /* Positioning the gear icon absolutely within the loader */
+    top: 50%;
+    /* Centered vertically */
+    left: 50%;
+    /* Centered horizontally */
+    transform: translate(-50%, -50%) scale(0);
+    /* Initial state, scaled down to 0. For when the gear icon is not visible */
+    transition: transform 1.5s ease-in-out;
+    /* Transition for scaling when hovered */
+    font-size: 2rem;
+    line-height: 1;
+    /* We had to set line-height to 1 to prevent extra space below the gear icon */
+}
+
+#loader-t:hover {
+    box-shadow: 0 0 2rem rgb(255 0 0 / 80%);
+    /* Enhanced shadow effect on hover */
+    transform: rotate(360deg);
+    /* Rotate the loader on hover */
+}
+
+#loader-t:hover::after {
+    transform: translate(-50%, -50%) scale(1.2);
+    /* Stay centered while scaling up on hover */
+}
