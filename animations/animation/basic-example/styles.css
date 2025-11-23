@@ -1,0 +1,106 @@
+body {
+    overflow-x: hidden;
+}
+
+main {
+    min-height: 500vh;
+}
+
+@keyframes slide-in {
+    from {
+        translate: 150vw 100vh;
+        /* Start off-screen: Far right, far bottom. Making these negative values changes the direction. */
+        scale: 200% 1;
+        /* Start scaled wider horizontally. Remember, scale: scaleX scaleY */
+    }
+
+    to {
+        translate: 0 0;
+        /* End at original position */
+        scale: 100% 1;
+        /* End at normal scale.  */
+    }
+}
+
+@keyframes grow-shrink {
+
+    /* Define the grow-shrink animation */
+    0%,
+    25%,
+    75% {
+        /* At 0%, 25%, and 75% of the animation duration */
+        scale: 100%;
+        /* Set scale to normal size */
+    }
+
+    50% {
+        /* At 50% of the animation duration */
+        scale: 200%;
+        /* Set scale to double size */
+        color: magenta;
+        /* Change color to magenta */
+    }
+}
+
+.example {
+    border: 2px solid black; 
+    width: fit-content;
+    height: fit-content;   
+    margin: 20px;
+    padding: 10px;
+}
+
+
+
+
+
+/* Example 1: Slide In Animation */
+.one p {
+    animation-duration: 3s;
+    animation-name: slide-in;
+}
+
+/* Example 2: Added Fade Color and boom Animation */
+.two p {
+    animation-duration: 3s;
+    animation-name: slide-in;
+}
+.two span {
+    display: inline-block;
+    animation-duration: 8s;
+    /* Set the duration of the animation to 3 seconds */
+    animation-name: grow-shrink;
+    /* Apply the grow-shrink animation to the span elements */
+}
+
+/* Example 3: Infinite Animation */
+.three p {
+    animation-duration: 3s;
+    animation-name: slide-in;
+    animation-iteration-count: infinite;
+}
+.three span {
+    display: inline-block;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    /* Set the duration of the animation to 1 second */
+    animation-name: grow-shrink;
+    /* Apply the grow-shrink animation to the span elements */
+}
+
+/* Example 4: Alternate Animation */
+.four p {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: slide-in;
+    animation-direction: alternate;
+}
+.four span {
+    display: inline-block;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* Set the duration of the animation to 1 second */
+    animation-name: grow-shrink;
+    /* Apply the grow-shrink animation to the span elements */
+}

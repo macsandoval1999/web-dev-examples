@@ -76,7 +76,7 @@
 
 
 /* ******************Infinite Animated Example****************** */
-/* Loader with rotating gear icon that appears on hover. Here we use infinite looping animations. We use keyframe animations for continuous effects. Transitions don't really apply in these cases. */
+/* Loader with rotating gear icon that appears on hover. Here we use infinite looping animations. We use keyframe animations for continuous effects. Transitions don't really apply in these cases. Keep in mind, you could run these animations for a specific number of iterations by using the animation-iteration-count property so they could also be used to make timed animations. */
 #loader {
     margin: 2rem;
     width: 50px;

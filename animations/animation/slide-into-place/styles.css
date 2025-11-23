@@ -1,0 +1,25 @@
+body {
+    overflow-x: hidden;
+}
+div {
+    width: 80vw;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+p {
+    animation-duration: 3s;
+    animation-name: slide-in;
+}
+
+@keyframes slide-in {
+    from {
+        translate: 150vw 100vh; /* Start off-screen: Far right, far bottom. Making these negative values changes the direction. */
+        scale: 200% 1; /* Start scaled wider horizontally. Remember, scale: scaleX scaleY */
+    }
+
+    to {
+        translate: 0 0; /* End at original position */
+        scale: 100% 1; /* End at normal scale.  */
+    }
+}

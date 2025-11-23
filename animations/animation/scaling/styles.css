@@ -1,0 +1,33 @@
+p {
+    animation-duration: 3s;
+    animation-name: slide-in;
+}
+
+p span {
+    display: inline-block;
+    animation-duration: 3s; /* Set the duration of the animation to 3 seconds */
+    animation-name: grow-shrink; /* Apply the grow-shrink animation to the span elements */
+}
+
+@keyframes slide-in {
+    from {
+        translate: 150vw 0;
+        scale: 200% 1;
+    }
+
+    to {
+        translate: 0 0;
+        scale: 100% 1;
+    }
+}
+
+@keyframes grow-shrink { /* Define the grow-shrink animation */
+    0%, 25%, 75% { /* At 0%, 25%, and 75% of the animation duration */
+        scale: 100%; /* Set scale to normal size */
+    }
+
+    50% { /* At 50% of the animation duration */
+        scale: 200%; /* Set scale to double size */
+        color: magenta; /* Change color to magenta */
+    }
+}
