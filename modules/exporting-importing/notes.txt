@@ -1,0 +1,35 @@
+OVERVIEW
+    The main idea behind modules is allowing you to import and export different sections of code from different files into other files which allows you to break apart your code into more smaller grained files which makes your code easier to understand and reason with later on when you have to change it.
+
+EXPORT
+    What we want to do is export the different information about the user so that we can use it in our main.js
+
+    There's two different types
+    of exports we can use. There's a default export and then there's a standard export.
+
+    There's two different ways to export
+    things. The first way is to define it at the end of your file by their names.
+        export default User;
+        export { printUser, printAge };
+
+    You can only default
+    export one thing so usually it's going
+    to be the class that your file is
+    defining if you are defining a class in
+    your file.
+
+IMPORT
+    All we need to use is the import syntax. We say import and then we say the name of the default thing that we want to import, in our case it is user.Then we just say we want to import it from user.js
+
+    When you're importing things in JavaScript you need to make sure that you put in front of it a ./ if you're wanting to use relative paths or just a single slash if you want to use an absolute path so we're just going to use an absolute path in our case either one would work.
+
+IN HTML
+    We need to tell our index.html that we're using modules in our javascript file. We do this by giving our script element a type="module" attribute. This tells our browser that we're using modules inside of our javascript file.
+
+    By defining the type of module, it also defaults our file to use the defer attribute for loading it. This means we dont have to put defer in our script element as it does it by default.
+
+USING IMPORTS
+    When we use defualt exports, if we don't want to call 
+    the export "User" user... we could import it as U for example. We can just change the name in our import statement to be U, and then where we use a user just change it to U as well. It still works and we we still get a user object because this was the default object. In other words, we are allowed to change the name of our default objects when importing. 
+
+    To import non-default, named exports, they need to be inside curly brackets as shown in our script.
