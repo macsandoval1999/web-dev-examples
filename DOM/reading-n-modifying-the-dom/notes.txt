@@ -1,0 +1,1 @@
+Suppose the author wants to change the header of the document in What is a DOM tree? and write two paragraphs instead of one. The following script would do the job:

@@ -1,0 +1,11 @@
+This example demonstrates how events fire and are handled in the DOM in a very simple way. When the BODY of this HTML document loads, an event listener is registered with the top row of the TABLE. The event listener handles the event by executing the function stopEvent, which changes the value in the bottom cell of the table.
+
+However, stopEvent also calls an event object method, event.stopPropagation, which keeps the event from bubbling any further up into the DOM. Note that the table itself has an onclick event handler that ought to display a message when the table is clicked. But the stopEvent method has stopped propagation, and so after the data in the table is updated, the event phase is effectively ended, and an alert box is displayed to confirm this.
+
+Description of whats happening:
+First HTML
+    We have in our html a table with the id of t-daddy. Within are two table rows <tr> called tbl1 and tbl2. Withing the rows are two data cells with ids c1 and c2.
+Now JS
+    In our script we add an event listener to the table itself. When the table is clicked (meaning its children as well), the console will log a message saying "t-daddy clicked" which will confirm that the event was a success. If you click the table, it actually does work!
+However...
+    We also added an event listener to first row id'd tbl1. When clicked, it will trigger a function called stopEvent. This function gets the cell in row two id'd c2, and changes its text context to hello. It will also call the built in function called stopPropagation() which halts any further events attached to the that data cell. This means that its parents event listener is never triggered.
