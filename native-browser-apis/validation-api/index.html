@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<main>
+    <h1>Validation API and :valid/:invalid pseudo-classes</h1>
+    <form>
+        <label for="code">Enter Code: </label>
+        <input type="password" id="code" required pattern="^(?=(?:[^A-Z]*[A-Z]){1}[^A-Z]*$)(?=(?:\D*\d){2}\D*$)[A-Za-z\d]{6,}$">
+        <!-- 
+            ^START(?=(?:[^A-Z]*[A-Z]){1}[^A-Z]*$)(?=(?:\D*\d){2}\D*$)[A-Za-z\d]{6,}END$
+            ^ ..... $
+            ^ asserts the start of the string.
+            $ asserts the end of the string.
+            This ensures the entire input is checked.
+
+
+            (?=(?:[^A-Z]*[A-Z]){1}[^A-Z]*$)
+            (?=....) This is a positive lookahead.
+            (?:[^A-Z]*[A-Z]){1} means: find exactly one uppercase letter (A-Z) anywhere in the string.
+            [^A-Z]* allows any number of non-uppercase letters before and after.
+            The $ at the end ensures this applies to the whole string.
+            Role: Ensures there is exactly one uppercase letter.
+
+            (?=(?:\D*\d){2}\D*$)
+            Another positive lookahead.
+            (?:\D*\d){2} means: find exactly two digits (\d) in the string, possibly separated by non-digits (\D*).
+            \D* allows any number of non-digit characters before, between, and after the digits.
+            The $ at the end ensures this applies to the whole string.
+            Role: Ensures there are exactly two digits.
+
+            [A-Za-z\d]{6,}
+            This matches the actual content of the input.
+            [A-Za-z\d] allows only uppercase letters, lowercase letters, and digits.
+            {6,} means at least six characters.
+            Role: Ensures the string is at least six characters long and contains only letters and digits.
+
+            Summary of roles:
+            Must be at least 6 characters, only letters and digits.
+            Must contain exactly one uppercase letter.
+            Must contain exactly two digits.
+        -->
+        <button type="button">Check Code</button> <!-- Button to check code validity -->
+    </form>
+    <div id="message"></div> <!-- Message to display code validity result -->
+    <div id="description">
+        <ul>
+            <li>A valid input
+                <ol class="check">
+                    <li>contains 1 uppercase letter</li>
+                    <li>is exactly 2 digits</li>
+                    <li>has at least six characters</li>
+                    <li>has only letters and digits</li>
+                </ol>
+            </li>
+            <li>CSS :valid & :invalid pseudo-classes <br><em>&mdash; input background-color turns green when valid entry
+                    is detected</em></li>
+            <li>The browser's native Constraint Validation API tool tip popup is being prevented
+                <br><em>&mdash; this is because the "Check Code" button has type="button" versus type="submit" or the
+                    default</em>
+            </li>
+        </ul>
+    </div>
+</main>
+</body>
+</html>
