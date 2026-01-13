@@ -1,0 +1,22 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 2rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+
+pre {
+    background: #f4f4f4;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+
+code {
+    color: green;
+    font-size: smaller;
+    font-family: consolas;
+}

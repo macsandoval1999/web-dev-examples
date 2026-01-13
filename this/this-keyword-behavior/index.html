@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h2>Using <code>this</code> in JavaScript</h2>
+    <hr>
+    <p>Object used in this example.</p>
+    <code>
+    const person = {<br>
+    &nbsp;&nbsp; name: "Maria",<br>
+    &nbsp;&nbsp; greet: function () {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; return `Hello, my name is ${this.name}`;<br>
+    &nbsp;&nbsp; }<br>
+      };</code>
+    <hr>
+    <p>1. Direct call of an Object named <code>person</code> with a method using <code>this</code></p>
+    <pre><code>output.innerText += "1. Direct call: " + person.greet() + "\n";</code></pre>
+    <p>2. Assigning method to a variable (context loss) </p>
+    <pre><code>const lostGreet = person.greet;
+    output.innerText += "2. Lost context: " + lostGreet() + "\n";</code></pre>
+    <p>3. Using .bind() to restore context </p>
+    <pre><code>const boundGreet = person.greet.bind(person);
+    output.innerText += "3. Bound context: " + boundGreet() + "\n";</code></pre>
+    
+    <button id="greet">4. Greet (Event Listener)</button>
+    <hr>
+    <h3>Output</h3>
+    <pre id="output"></pre>
+</body>
+</html>
