@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Countdown Timer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- This is a simple countdown timer -->
+    <div class="clock">
+        <!-- Input for custom time in seconds -->
+        <input type="number" id="customTime" min="1" max="999" placeholder="Seconds">
+        <!-- Display for the countdown timer. Before it's run, it is empty, so its model box takes no space -->
+        <h1 id="countdown"></h1>
+        <!-- Button to start the countdown -->
+        <button type="button" id="startButton">Start</button>
+        <!-- Button to pause or resume the countdown -->
+        <button type="button" id="pauseResumeButton">Pause</button>
+    </div>
+</body>
+
+</html>
