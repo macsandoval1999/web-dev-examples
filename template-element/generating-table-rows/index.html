@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- TABLE -->
+    <table id="producttable">
+        <!-- Table Header containing one row with column headers -->
+        <thead>
+            <!-- Table Row that contains two Data Cells which act as column headers -->
+            <tr>
+                <th>UPC_Code</th> <!-- Data Cell, or column header-->
+                <th>Product_Name</th> <!-- Data Cell, or column header-->
+            </tr>
+        </thead>
+        <!-- Table Body containing rows of data -->
+        <tbody>
+            <!-- Table rows will be dynamically added here by JavaScript -->
+        </tbody>
+    </table>
+    
+    <!-- Template Element defining the structure of a product row -->
+    <!-- Notice that the template element is not rendered in the document and is placed outside the table. This is to show you that the template element can be placed anywhere in the document. This also means it does not affect the layout or appearance of the page. -->
+    <template id="productrow">
+        <tr>
+            <td class="record"></td>
+            <td></td>
+        </tr>
+    </template>
+</body>
+</html>
