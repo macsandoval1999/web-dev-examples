@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<!--****************
+ HEAD SECTION
+*****************-->
+<head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory | Blacktop Automotives</title>
+    <meta name="description" content="Check out our extensive inventory of high-end vehicles at Blacktop Automotives. From sleek sedans to powerful SUVs, find your dream car today!">
+    <meta name="author" content="Marco Sandoval">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Inventory | Blacktop Automotives">
+    <meta property="og:description" content="Check out our extensive inventory of high-end vehicles at Blacktop Automotives. From sleek sedans to powerful SUVs, find your dream car today!">
+    <meta property="og:image" content="https://macsandoval1999.github.io/wdd231/final/images/preview.jpg">
+    <meta property="og:url" content="https://macsandoval1999.github.io/wdd231/final/inventory.html">
+    <meta property="og:type" content="website">
+
+    <!-- Instagram Meta Tags -->
+    <meta name="instagram:title" content="Inventory | Blacktop Automotives">
+    <meta name="instagram:description" content="Check out our extensive inventory of high-end vehicles at Blacktop Automotives. From sleek sedans to powerful SUVs, find your dream car today!">
+    <meta name="instagram:image" content="https://macsandoval1999.github.io/wdd231/final/images/preview.jpg">
+    <meta name="instagram:url" content="https://macsandoval1999.github.io/wdd231/final/inventory.html">
+    <meta name="instagram:type" content="website">
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Script Files -->
+    <script src="scripts/nav-n-footer.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script type="module" src="scripts/inventory-main.js"></script>
+
+    <!-- Icons -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+
+<!--****************
+BODY SECTION
+*****************-->
+
+<body>
+    <header>
+        <a href="index.html"><img src="images/logo.svg" alt="Blacktop Automotives Logo" width="150" height="150"></a>
+        <h1>Blacktop Automotives</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="current-page"><a href="#">Inventory</a></li>
+                <li><a href="scheduling.html">Services</a></li>
+            </ul>
+        </nav>
+        <a id="menu" href="#" aria-label="Menu"></a>
+    </header>
+    <main>
+        <!-- Inventory Title -->
+        <h2 class="section-title">Explore our Vehicles</h2>
+
+        <!-- Inventory Filter Menu -->
+        <ul id="inventory-filter">
+            <li><a href="#" id="all">All</a></li>
+            <li><a href="#" id="sedan">Sedans</a></li>
+            <li><a href="#" id="suv">SUVs</a></li>
+            <li><a href="#" id="truck">Trucks</a></li>
+            <li><a href="#" id="coupe">Coupes</a></li>
+            <li><a href="#" id="saved">Saved <i class="fa-regular fa-heart"></i></a></li>
+        </ul>
+
+        <ul id="inventory-sort">
+            <li><a href="#" id="sort-price-asc"><span class="arrow">&uarr;</span> Low to High</a></li>
+            <li><a href="#" id="sort-price-desc">High to Low <span class="arrow">&darr;</span></a></li>
+        </ul>
+
+        <!-- Inventory Cards Container -->
+        <div id="inventory-cards"></div>
+
+        <!-- Modal for Membership Information -->
+        <dialog id="vehicle-modal-container"></dialog>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="info-box">
+            <strong>Blacktop Automotives</strong>
+            <address>
+                123 E Dealer Road<br>
+                Mesa, AZ 85205
+            </address>
+            <p>Phone: (480) 123-4567</p>
+            <p>Email: info@blacktopautomotives.com</p>
+        </div>
+    
+        <!-- Media Bar -->
+        <div class="media-bar">
+            <a href="https://www.facebook.com/profile.php?id=100089012599040&sk=about_contact_and_basic_info"
+                target="_blank">
+                <img src="images/facebook.svg" alt="Facebook Logo" width="16" height="16">
+            </a>
+            <a href="https://www.instagram.com/i.am_chiaro?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank">
+                <img src="images/instagram.svg" alt="Instagram Logo" width="16" height="16">
+            </a>
+            <a href="https://github.com/macsandoval1999/wdd231" target="_blank">
+                <img src="images/github.svg" alt="GitHub Logo" width="16" height="16">
+            </a>
+            <a href="https://www.linkedin.com/in/marcosandoval1999/" target="_blank">
+                <img src="images/linkedin.svg" alt="LinkedIn Logo" width="16" height="16">
+            </a>
+        </div>
+    
+        <!-- Footer Text -->
+        <div class="copy-box">
+            <strong>WDD231 Final Project</strong>
+            <p>Developed by <strong>Marco Sandoval</strong></p>
+            <p>&copy; <span id="current-year"></span> Blacktop Automotives</p>
+            <p id="last-modified"></p>
+            <a class="project-link" href="attributions.txt" target="_blank">Attributions</a>
+            <a class="project-link" href="videolink" target="_blank">Video Presentation</a>
+        </div>
+    </footer>
+</body>
+
+</html>

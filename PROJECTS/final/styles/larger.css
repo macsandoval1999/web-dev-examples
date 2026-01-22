@@ -1,0 +1,360 @@
+@media (min-width: 430px) {
+    /* ************
+    PAGE WIDE STYLES
+    ***************/
+    .intro-card-caption {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 638px) {
+    /* ************
+    PAGE WIDE STYLES
+    ***************/
+    #menu {
+        display: none;
+    }
+
+    nav {
+        display: block;
+        padding: 0.5rem;
+        justify-self: end;
+    }
+
+    nav ul {
+        flex-direction: row;
+        padding: 0;
+        width: 100%;
+        justify-content: space-evenly;
+        background-color: white;
+        border-radius: 10px;
+        max-width: 600px;
+    }
+
+    nav ul li {
+        margin: 0;
+        transition: all 0.3s ease;
+        border: 0;
+        padding-top: 5px;
+        height: fit-content;
+    }
+
+    nav ul li:hover {
+        background-color: var(--secondary-color);
+        transition: all 0.1s ease;
+    }
+    nav ul li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-size: 1rem;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 100px auto 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+    header h1 { 
+        grid-column: 2/3;
+        font-size: 1.1rem;
+        justify-self: self-start;
+        align-self: center;
+    }
+    nav {
+        grid-column: 3/4;
+        align-self: center;
+    }
+    header img {
+        width: 100px;
+        height: auto;
+    }
+
+
+
+    /* *****************
+    INDEX PAGE STYLES
+    ********************/
+    .hero-text h2 {
+        font-size: 2.5rem;
+    }
+    .hero-text p {
+        font-size:1.5rem;
+    }
+    .hero-button {
+        transition: all 0.3s ease;
+    }
+    .hero-button:hover {
+        transform: translateY(-3px);
+        background-color: var(--primary-color);
+        transition: all 0.1s ease;
+    }
+
+    .intro-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        line-height: 0;
+        padding: 0;
+        gap: 1px;
+    }
+
+    .intro-container img {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        filter: brightness(90%);
+        transition: all 0.5s ease;
+    }
+    .intro-card:hover img {
+        filter: brightness(100%);
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+    }
+    .mechanic-img {
+        grid-column: 1/2;
+    }
+
+    .cars-img {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .sales-img {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    .intro-container p {
+        font-size: 0.8rem;
+        grid-column: 2/4;
+        grid-row: 1/2;
+        padding: 1rem;
+        line-height: 1.6;
+    }
+    .intro-card {
+        margin: 0;
+        overflow: hidden;
+    }
+    .intro-card-header {
+        width: 100%;
+        left: 0;
+        border-radius: 0;
+        top: 0;
+        border: 0;
+        padding: 1rem 0;
+        height: fit-content;
+        font-size: 1rem;
+        z-index: 2;
+    }
+    .intro-card-caption {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0;
+        height: 50%;
+    }
+    .contact-us a {
+        transition: all 0.3s ease;
+    }
+    .contact-us a:hover {
+        transform: translateY(-3px);
+        transition: all 0.1s ease;
+        box-shadow: 0 0 10px var(--highlight-color);
+        border: 1px solid var(--primary-color);
+    }
+
+    .contact-us, .visit-us {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    /* ************
+    INVENTORY PAGE STYLES
+    ***************/
+    .close-button {
+        scale: 1.2;
+        transition: all 0.3s ease;
+    }
+
+    .close-button:hover {
+        scale: 1;
+        transition: all 0.1s ease;
+    }
+
+    .vehicle-image-container {
+        overflow: hidden;
+    }
+
+    .vehicle-card:hover {
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.719);
+    }
+
+    .vehicle-card img {
+        filter: brightness(90%);
+        transition: all 0.3s ease;
+    }
+
+    .vehicle-card:hover img {
+        filter: brightness(100%);
+        transform: scale(1.03);
+        transition: all 0.3s ease;
+    }
+
+    #inventory-filter li {
+        transition: all 0.3s ease;
+    }
+
+    #inventory-filter li:hover {
+
+        transition: border 0.3s ease;
+    }
+
+    #inventory-filter a,#inventory-sort a {
+        position: relative;
+    }
+
+    #inventory-filter a::after, #inventory-sort a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background: var(--primary-color);
+        border-radius: 2px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s;
+    }
+
+    #inventory-filter a:hover::after, #inventory-sort a:hover::after {
+        transform: scaleX(1);
+        transition: transform 0.3s;
+    }
+    .media-bar a {
+        transition: all 0.3s ease;
+    }
+    .media-bar a:hover {
+        transform: scale(1.1);
+        transition: all 0.1s ease;
+    }
+
+
+
+    /* *********************
+    SCHEDULING PAGE
+    ************************/
+    #service-spotlight-container {
+        flex-direction: row;
+    }
+    .service-spotlight-card {
+        height: 210px;
+        transition: transform 0.3s ease;
+    }
+    .service-spotlight-card:hover {
+        transform: translateY(-5px);
+        transition: transform 0.1s ease;
+    }
+
+    #service-modal-open-buttons {
+        flex-direction: row;
+    }
+    .service-modal-button-card img {
+        width: 100px;
+        height: auto;
+        transition: all 0.3s ease;
+    }
+    .service-modal-button-card:hover img {
+        transform: scale(1.05);
+        transition: all 0.1s ease;
+    }
+
+    /* ************
+    THANK YOU STYLES
+    ***************/
+    .thank-you-content button {
+        transition: all 0.3s ease;
+    }
+    .thank-you-content button:hover {
+        background-color: var(--darkbg-text);
+        color: var(--primary-color);
+        transition: all 0.1s ease;
+        box-shadow: 0 0 10px var(--primary-color);
+    }
+}
+@media (min-width: 680px) {
+    header h1 { 
+        font-size: 1.5rem;
+    }
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+}
+
+
+@media (min-width: 800px) {
+    .service-spotlight-card {
+        height: 180px;
+    }    
+}
+
+@media (min-width: 1000px) {
+    /* ************
+    PAGE WIDE STYLES
+    ***************/
+    header img {
+        width: 150px;
+        height: auto;
+    }
+
+    header h1 { 
+        font-size: 2rem;
+        padding-left: 5rem;
+    }
+
+    nav ul li {
+        scale: 1.2;
+        margin: 0.5rem 1rem;
+    }
+
+
+    /* *****************
+    INDEX PAGE STYLES
+    ********************/
+    .hero-text h2 {
+        font-size: 3rem;
+    }
+
+    .hero-text p {
+        font-size: 2rem;
+    }
+
+    .hero-button {
+        margin-top: 2rem;
+        scale: 1.5;
+    }
+
+    .intro-container p {
+        font-size: 1.2rem;
+        width: 75%;
+    }
+    .intro-card-caption p {
+        font-size: 1.3rem;
+
+    }
+
+
+
+
+    /* ************
+    FOOTER STYLES
+    ***************/
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<!--****************
+ HEAD SECTION
+*****************-->
+
+<head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduling | Blacktop Automotives</title>
+    <meta name="description" content="Test drive your dream car today, or schedule a maintenance appointment with Blacktop Automotives. Our expert team is here to assist you with all your automotive needs.">
+    <meta name="author" content="Marco Sandoval">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Scheduling | Blacktop Automotives">
+    <meta property="og:description" content="Test drive your dream car today, or schedule a maintenance appointment with Blacktop Automotives. Our expert team is here to assist you with all your automotive needs.">
+    <meta property="og:image" content="https://macsandoval1999.github.io/wdd231/final/images/preview.jpg">
+    <meta property="og:url" content="https://macsandoval1999.github.io/wdd231/final/scheduling.html">
+    <meta property="og:type" content="website">
+
+    <!-- Instagram Meta Tags -->
+    <meta name="instagram:title" content="Scheduling | Blacktop Automotives">
+    <meta name="instagram:description" content="Test drive your dream car today, or schedule a maintenance appointment with Blacktop Automotives. Our expert team is here to assist you with all your automotive needs.">
+    <meta name="instagram:image" content="https://macsandoval1999.github.io/wdd231/final/images/preview.jpg">
+    <meta name="instagram:url" content="https://macsandoval1999.github.io/wdd231/final/scheduling.html">
+    <meta name="instagram:type" content="website">
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Script Files -->
+    <script src="scripts/nav-n-footer.js" defer></script>
+    <script type="module" src="scripts/scheduling-main.js"></script>
+    <script src="scripts/getdates.js" defer></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+
+
+
+<!--****************
+BODY SECTION
+*****************-->
+
+<body>
+    <header>
+        <a href="index.html"><img src="images/logo.svg" alt="Blacktop Automotives Logo" width="150" height="150"></a>
+        <h1>Blacktop Automotives</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li class="current-page"><a href="#">Services</a></li>
+            </ul>
+        </nav>
+        <a id="menu" href="#" aria-label="Menu"></a>
+    </header>
+
+
+
+    <main>
+        <!-- Service Spotlight and info-->
+        <section class="service-spotlight-container">
+            <h2 class="section-title">Explore Our Services</h2>
+            <h3 class="section-subtitle">Popular Services</h3>
+            <div id="service-spotlight-container"></div>
+        </section>
+
+
+        <!-- Service Options -->
+        <section class="service-options-container">
+            <h3 class="section-subtitle">Check Out Our Service Options</h3>
+            <p>(Click the icons below to learn more about each service)</p>
+            <div id="service-modal-open-buttons">
+                <div class="service-modal-button-card">
+                <button id="maintenance-modal" title="Schedule Maintenance Service"><img src="images/cog.svg" alt="Maintenance Service Icon" width="24" height="24"></button>
+                <h3>Maintenance</h3>
+            </div>
+                <div class="service-modal-button-card">
+                <button id="consultation-modal" title="Schedule Consultation Service"><img src="images/paperwork.svg" alt="Consultation Service Icon" width="24" height="24"></button>
+                <h3>Consultation</h3>
+            </div>
+                <div class="service-modal-button-card">
+                <button id="custom-modal" title="Schedule Custom Service"><img src="images/upgrade.svg" alt="Custom Service Icon" width="24" height="24"></button>
+                <h3>Custom</h3>
+            </div>  
+            </div>
+        </section>  
+
+
+        <section class="form-section">
+            <h2 class="section-title">Schedule Your Appointment Today!</h2>
+            <h3 class="section-subtitle">Please fill out the form below to book your service appointment.</h3>
+            <!-- Form -->
+            <div class="form-container">
+                <form method="GET" action="thank-you.html" class="member-form">
+                    <fieldset>
+
+                            <!-- Contact Information -->
+                        <legend>Help Us Get to Know You Better<span class="required">*</span></legend>
+                        <!-- Full Name -->
+                        <label>Full Name<span class="required">*</span><input type="text" name="fullName" id="fullName" required autocomplete="given-name" title="Your Full Name" minlength="2" pattern="[A-Za-z\\-\\s]{2,}" placeholder="John Doe">
+                        </label>
+                        <!-- Email -->
+                        <label>Email<span class="required">*</span><input type="email" name="email" id="email" required autocomplete="email"
+                                title="Your Email Address" placeholder="example@example.com">
+                        </label>
+                        <!-- Phone Number -->
+                        <label>Phone Number<span class="required">*</span><input type="tel" name="phone" id="phone" required autocomplete="tel" title="Your Phone Number" pattern="\(\d{3}\) \d{3}-\d{4}" placeholder="(123) 456-7890">
+                        </label>
+                    </fieldset>
+
+
+                    <!-- Appointment Details -->
+                    <fieldset>
+                        <legend>What Can We Do For You?<span class="required">*</span></legend>
+                        <!-- Service Type -->
+                        <label>Service Type<span class="required">*</span>
+                            <select name="serviceType" id="service-type" required>
+                                <option value="" disabled selected>Select a service type &#9207;</option>
+                                <option value="Maintenance">Maintenance</option>
+                                <option value="Consultation">Consultation</option>
+                                <option value="Custom">Custom</option>
+                            </select>
+                        </label>
+                        <!-- Preferred Date -->
+                        <label>Preferred Date
+                            <select name="preferredDate" id="preferred-date">
+                                <option value="" disabled selected>Select a date &#9207;</option>
+                                <option value="Monday">Monday</option>
+                                <option value="Tuesday">Tuesday</option>
+                                <option value="Wednesday">Wednesday</option>
+                                <option value="Thursday">Thursday</option>
+                                <option value="Friday">Friday</option>
+                                <option value="Saturday">Saturday</option>
+                                <option value="Sunday">Sunday</option>
+                            </select>
+                        </label>
+                    </fieldset>
+
+                    <!-- Service Appointments Only -->
+                    <fieldset>
+                        <legend>Service Appointments Only</legend>
+                        <!-- Vehicle Details -->
+                        <label>Tell Us About Your Vehicle
+                            <input type="text" name="vehicleDetails" id="vehicle-details" placeholder="Make, Model, Year">
+                        </label>
+                        <!-- Extra Service Details -->
+                        <label>Additional Details
+                            <textarea name="extraServiceDetails" id="extra-service-details" rows="4" placeholder="Please provide any additional information here..."></textarea>
+                        </label>
+                    </fieldset>
+            
+                    <!-- Vehicle Inquiry -->
+                    <fieldset>
+                        <legend>Vehicle Inquiries<span class="required">*</span></legend>
+                        <!-- See vehicle -->
+                        <label>Are you scheduling this appointment in relation to one of our vehicles?</label>
+                            <label><input id="vehicle-yes" type="radio" name="vehicleRelation" value="Yes" required> Yes</label>
+                            <label><input id="vehicle-no" type="radio" name="vehicleRelation" value="No" required checked> No</label>
+                        <label>If so, please provide the vehicle id
+                            <input title="Vehicle ID" type="number" min="1" name="vehicleID" id="vehicleID" placeholder="1">
+                        </label>
+                    </fieldset>
+
+                    <!-- Hidden Timestamp -->
+                    <input type="hidden" name="timestamp" id="timestamp">
+
+                    <!-- Submit Button -->
+                    <button type="submit" id="submit-button">Schedule Appointment</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Services Modal -->
+        <dialog id="services-modal-container">
+            <div id="services-modal-header"></div>
+            <div id="services-modal-content"></div>
+            <button id="services-modal-close" aria-label="Close Services Modal">X</button>
+        </dialog>
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="info-box">
+            <strong>Blacktop Automotives</strong>
+            <address>
+                123 E Dealer Road<br>
+                Mesa, AZ 85205
+            </address>
+            <p>Phone: (480) 123-4567</p>
+            <p>Email: info@blacktopautomotives.com</p>
+        </div>
+    
+        <!-- Media Bar -->
+        <div class="media-bar">
+            <a href="https://www.facebook.com/profile.php?id=100089012599040&sk=about_contact_and_basic_info"
+                target="_blank">
+                <img src="images/facebook.svg" alt="Facebook Logo" width="16" height="16">
+            </a>
+            <a href="https://www.instagram.com/i.am_chiaro?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank">
+                <img src="images/instagram.svg" alt="Instagram Logo" width="16" height="16">
+            </a>
+            <a href="https://github.com/macsandoval1999/wdd231" target="_blank">
+                <img src="images/github.svg" alt="GitHub Logo" width="16" height="16">
+            </a>
+            <a href="https://www.linkedin.com/in/marcosandoval1999/" target="_blank">
+                <img src="images/linkedin.svg" alt="LinkedIn Logo" width="16" height="16">
+            </a>
+        </div>
+    
+        <!-- Footer Text -->
+        <div class="copy-box">
+            <strong>WDD231 Final Project</strong>
+            <p>Developed by <strong>Marco Sandoval</strong></p>
+            <p>&copy; <span id="current-year"></span> Blacktop Automotives</p>
+            <p id="last-modified"></p>
+            <a class="project-link" href="attributions.txt" target="_blank">Attributions</a>
+            <a class="project-link" href="videolink" target="_blank">Video Presentation</a>
+        </div>
+    </footer>
+</body>
+
+</html>

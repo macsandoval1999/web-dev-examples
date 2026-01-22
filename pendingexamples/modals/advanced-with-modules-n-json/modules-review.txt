@@ -1,0 +1,5 @@
+First, you must setup your script to handle modules
+
+Second, export variables so they are usable in other javascript files.
+
+Third, import variables into the main module script file.

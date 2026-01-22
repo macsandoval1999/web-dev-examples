@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Oil Change",
+    "description": "Replace engine oil and filter for optimal performance.",
+    "price": 49.99,
+    "duration": "30 minutes",
+    "category": "Maintenance"
+  },
+  {
+    "id": 2,
+    "name": "Tire Rotation",
+    "description": "Rotate tires to ensure even wear and extend tire life.",
+    "price": 29.99,
+    "duration": "20 minutes",
+    "category": "Maintenance"
+  },
+  {
+    "id": 3,
+    "name": "Brake Inspection",
+    "description": "Comprehensive brake system check and pad replacement if needed.",
+    "price": 69.99,
+    "duration": "45 minutes",
+    "category": "Maintenance"
+  },
+  {
+    "id": 4,
+    "name": "Battery Replacement",
+    "description": "Test and replace car battery with a new one.",
+    "price": 119.99,
+    "duration": "30 minutes",
+    "category": "Maintenance"
+  },
+  {
+    "id": 5,
+    "name": "Wheel Alignment",
+    "description": "Adjust wheel angles to manufacturer specifications.",
+    "price": 89.99,
+    "duration": "1 hour",
+    "category": "Maintenance"
+  },
+  {
+    "id": 6,
+    "name": "Air Conditioning Service",
+    "description": "Inspect and recharge A/C system for optimal cooling.",
+    "price": 99.99,
+    "duration": "1 hour",
+    "category": "Maintenance"
+  },
+  {
+    "id": 7,
+    "name": "Transmission Service",
+    "description": "Flush and replace transmission fluid; inspect for issues.",
+    "price": 199.99,
+    "duration": "2 hours",
+    "category": "Maintenance"
+  },
+  {
+    "id": 8,
+    "name": "Detailing Package",
+    "description": "Full interior and exterior cleaning, waxing, and vacuuming.",
+    "price": 149.99,
+    "duration": "3 hours",
+    "category": "Custom"
+  },
+  {
+    "id": 9,
+    "name": "Engine Diagnostic",
+    "description": "Computerized scan to identify engine issues.",
+    "price": 59.99,
+    "duration": "45 minutes",
+    "category": "Maintenance"
+  },
+  {
+    "id": 10,
+    "name": "State Inspection",
+    "description": "Official vehicle safety and emissions inspection.",
+    "price": 39.99,
+    "duration": "30 minutes",
+    "category": "Maintenance"
+  },
+  {
+    "id": 11,
+    "name": "Test Drive",
+    "description": "Experience your dream car with a personalized test drive.",
+    "price": 0.00,
+    "duration": "30 minutes",
+    "category": "Consultation"
+  },
+  {
+    "id": 12,
+    "name": "Vehicle Consultation",
+    "description": "Discuss your automotive needs with our expert team.",
+    "price": 0.00,
+    "duration": "Varies",
+    "category": "Consultation"
+  },
+  {
+    "id": 13,
+    "name": "Custom Performance Tuning",
+    "description": "Enhance your vehicle's performance with tailored tuning services.",
+    "price": 299.99,
+    "duration": "2 hours",
+    "category": "Custom"
+  },
+  {
+    "id": 14,
+    "name": "Recall Service",
+    "description": "Free recall repairs as per manufacturer notices.",
+    "price": 0.00,
+    "duration": "Varies",
+    "category": "Maintenance"
+  },
+  {
+    "id": 15,
+    "name": "Financing Consultation",
+    "description": "Explore financing options for your next vehicle purchase.",
+    "price": 0.00,
+    "duration": "Varies",
+    "category": "Consultation"
+  }
+]

@@ -1,0 +1,12 @@
+Modals have three parts: a button of some sort you click to open the modal, the modal content itself, and a button inside the modal to close it. 
+
+Each has an ID, typically "openModal", "dialogBox", and "closeModal" 
+
+The script to make this work has a reference to these IDs.
+We add an event listener so when the open button is clicked, the modal shows up. We also add one for the close button so when the close button is clicked, the modal goes away.
+
+In css, we style the modal itself and the backdrop (the area behind the modal that darkens the rest of the screen). 
+
+The backdrop is part of the dialog element by default and we can style it with the ::backdrop pseudo-element. When styling the background color for the backdrop, use RGB values so you can easily change the opacity.
+
+We style the modal and bottons using their IDs.

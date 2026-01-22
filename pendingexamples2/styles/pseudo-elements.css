@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: Roboto, helvetica, sans-serif;
+    margin: 0;
+    padding: 0.5rem;
+    font-size: larger;
+    font-weight: 700;
+}
+
+section {
+    margin: 1rem 0;
+    border: 1px solid rgb(0 0 0 / 0.1);
+    padding: 0.5rem;
+    width: 760px;
+    background-color: #eee;
+}
+
+p,
+input,
+label {
+    margin: 0.25rem;
+    padding: 0.5rem;
+}
+/* The ::selection pseudo-element in CSS lets you style the portion of text that a user selects (highlights) with their mouse or keyboard.  Only a limited set of CSS properties (like color, background, and text-shadow) can be used with ::selection.*/
+.sel::selection {
+    background-color: #000;
+    color: yellow;
+}
+/* The ::first-line pseudo-element in CSS targets and styles only the first line of text within a block-level element. Only certain properties (like color, font, and background) can be used with ::first-line. */
+.firstline::first-line {
+    color: tomato;
+}
+/* The ::first-letter pseudo-element in CSS targets and styles only the first letter of the first line of a block-level element. It’s often used for decorative drop caps in text. */
+.firstletter::first-letter {
+    color: navy;
+    font-size: 2rem;
+}
+/* The ::before pseudo-element in CSS inserts content before the content of a selected element. It’s often used to add decorative or informational content with the content property. You can use ::before with most elements, and style it with CSS properties.*/
+.before::before {
+    content: "🎈 ";
+}
+/* The ::after pseudo-element in CSS inserts content after the content of a selected element. It’s commonly used with the content property to add decorative or informational elements.  You can style ::after with most CSS properties.*/
+.after::after {
+    content: " 🌮";
+}
+
+ol {
+    list-style: numeric;
+    margin-left: 3rem;
+}
+
+.counter {
+    counter-increment: paras;
+}
+
+.counter::before {
+    content: "🔸" counter(paras) ":";
+}
+
+.counter {
+    font-family: courier;
+}
+
+.mark-complete::before {
+    content: "🗝️ ";
+}
+/* The ::marker pseudo-element in CSS targets the marker box of list items,
+such as the bullet or number in <ul>and <ol>lists. It allows you to style the marker directly. Only certain properties (like color, font, and content) are supported with ::marker.*/
+ol li::marker {
+    color: navy;
+    font-size: 2rem;
+    content: "\2713";
+    /* check mark */
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop De Chiaro | Home |</title>
+    <meta name="description" content="Shop De Chiaro is an art and photography portfolio website with a a focus on black and white art, showcasing the interplay of light and shadow. See my art and photography and contact me for commissions, or just enjoy the gallery!">
+    <meta name="author" content="Marco Sandoval">
+    <link rel="stylesheet" href="styles/sdc.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <script src="scripts/sdc.js" defer></script>
+    <link rel="icon" type="image/png" href="images/fav-icon.png">
+</head>
+<body>
+    <header>
+        <div class="media">
+            <a href="https://www.instagram.com/i.am_chiaro?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+                <img src="images/insta-logo.svg" alt="Instagram Logo" class="icon">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100089012599040&sk=about_contact_and_basic_info" target="_blank">
+                <img src="images/fb-logo.svg" alt="Facebook Logo" class="icon">
+            </a>
+        </div>
+        <a id="menu" href="#" aria-label="Menu"></a>
+        <h1 class="title"><a href="index.html">- Shop De Chiaro -</a></h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="commissions.html">Commissions</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Container -->
+        <div class="hero-container">
+            <div class="hero-img">
+                <picture>
+                    <source media="(min-width: 1020px)" srcset="images/hero-large.webp" width="1200" height="900">
+                    <source media="(min-width: 768px)" srcset="images/hero-med.webp" width="800" height="600">
+                    <img src="images/hero-small.webp" alt="Misunderstood - Charcoal on paper by Marco Sandoval" width="400" height="300" loading="lazy">
+                </picture>
+            </div>
+            <section class="welcome">
+                <h2>Welcome!</h2>
+                <p>The brilliance of light simply cannot be captured without darkness.<br><br>Enjoy the gallery, hear my story, and reach out if you'd like to collaborate.</p>
+            </section>
+        </div>
+        <div class="preview-links">
+            <section class="about-preview">
+                <h2>About Me</h2>
+                <img src="images/artist.webp" alt="Photo of Marco Sandoval" width="150" height="150" loading="lazy">
+                <p>I'm Marco Sandoval, a self-taught artist and photographer based in Arizona. My work focuses on black and white art, exploring the interplay of light and shadow to create striking images that evoke emotion and tell stories.</p>
+                <a href="about.html" class="link">- Learn More -</a>
+            </section>
+            <section class="gallery-preview">
+                <h2>Gallery</h2>
+                <p>Explore my collection of black and white art and photography. From dramatic landscapes to intimate portraits, my work captures the essence of light and shadow in a way that is both timeless and contemporary.</p>
+                <a href="gallery.html" class="link">- View Gallery -</a>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Marco Sandoval | Arizona, USA
+        </p>
+        <p id="lastModified"></p>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Mesa Chamber of Commerce</title>
+    <meta name="description" content="Welcome to the Mesa Chamber of Commerce. Discover local businesses, join our community, and explore what Mesa has to offer!">
+    <meta name="author" content="Marco Sandoval">
+
+    <!-- Social Media Meta Tags are meta tags that are used to control how your content appears when shared on social media platforms -->
+    <!-- property= og:____     This is the Facebook Open Graph meta tag -->
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Home | Mesa Chamber of Commerce">
+    <!-- meta property="og:title", this is the title of the page -->
+    <meta property="og:description" content="Welcome to the Mesa Chamber of Commerce. Discover local businesses, join our community, and explore what Mesa has to offer!">
+    <!-- meta property="og:description", this is the description of the page -->
+    <meta property="og:image" content="https://macsandoval1999.github.io/wdd231/chamber/images/preview.jpg">
+    <!-- meta property="og:image", this is the image that will be displayed when the page is shared -->
+    <meta property="og:url" content="https://macsandoval1999.github.io/wdd231/chamber/index.html">
+    <!-- meta property="og:url", this is the URL of the page -->
+    <meta property="og:type" content="website"> <!-- meta property="og:type", this is the type of the page -->
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Script Files -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/getweather.js" defer></script>
+    <script src="scripts/random-generate.js" defer></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ***************Header*************** -->
+    <header>
+        <!-- Logo Box -->
+        <div class="logo-box">
+            <img src="images/mesa-logo.webp" alt="Mesa Chamber of Commerce Logo" width="200" height="200">
+            <h1>Mesa Chamber of Commerce</h1>
+        </div>
+
+        <!-- Hamburger Menu Button -->
+        <button id="ham-btn" class="hamburger" aria-label="menu toggle"></button>
+
+        <!-- ************Navigation**************** -->
+        <!-- navigation menu -->
+        <nav>
+            <ul id="nav-bar">
+                <li class="current"><a href="#">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+        <!-- Hero Container -->
+    <div class="hero-container">
+        <div class="hero-img">
+            <picture>
+                <source media="(min-width: 1020px)" srcset="images/hero-large.webp" width="1200" height="675">
+                <source media="(min-width: 768px)" srcset="images/hero-med.webp" width="800" height="450">
+                <img src="images/hero-small.webp" alt="City of Mesa" width="400" height="225" loading="lazy">
+            </picture>
+        </div>
+        <section class="welcome-box">
+            <h2>Join Our Community!</h2>
+            <p>Thriving businesses and a vibrant community await you in Mesa. <br>Discover the opportunities that await you in our dynamic city.</p>
+            <br>
+            <p>Don't wait, <a href="join.html">Join Our Community</a> now!</p>
+        </section>
+        <hr>
+    </div>
+    <!-- ********************Main***************** -->
+    <main>
+        <h2 class="page-title">Welcome to the Mesa Chamber of Commerce</h2>
+        <div class="mesa-info">
+            <section class="events-box">
+                <h3>Upcoming Events</h3>
+                <ul>
+                    <li><strong>Networking Event</strong> - November 25th, 2025</li>
+                    <li><strong>Business Workshop</strong> - December 5th, 2025</li>
+                    <li><strong>Annual Gala</strong> - January 20th, 2026</li>
+                </ul>
+            </section>
+
+            <section class="current-weather-box">
+                <h3>Current Weather</h3>
+                <div id="weather-icon"></div>
+                <div id="weather-today"></div>
+            </section>  
+            
+            <section class="forecast-box">
+                <h3>3-Day Forecast (3 PM)</h3>
+            </section>
+        </div>
+        <hr>
+        <div class="spotlight-container">
+            <h2>Member Spotlight</h2>
+            <section class="spotlight-members">
+            </section>
+        </div>
+        <hr>
+    </main>
+
+    <!-- ***************Footer*************** -->
+    <footer>
+        <div class="info-box">
+            <strong>Mesa Chamber of Commerce</strong>
+            <p>123 Main Street</p>
+            <p>Mesa, AZ 85201</p>
+            <p>Phone: (480) 123-4567</p>
+            <p>Email: info@mesachamber.com</p>
+        </div>
+
+        <!-- Media Bar -->
+        <div class="media-bar">
+            <a href="https://www.facebook.com/profile.php?id=100089012599040&sk=about_contact_and_basic_info"
+                target="_blank">
+                <img src="images/facebook.svg" alt="Facebook Logo" width="16" height="16">
+            </a>
+            <a href="https://www.instagram.com/i.am_chiaro?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank">
+                <img src="images/instagram.svg" alt="Instagram Logo" width="16" height="16">
+            </a>
+            <a href="https://github.com/macsandoval1999/wdd231" target="_blank">
+                <img src="images/github.svg" alt="GitHub Logo" width="16" height="16">
+            </a>
+            <a href="https://www.linkedin.com/in/marcosandoval1999/" target="_blank">
+                <img src="images/linkedin.svg" alt="LinkedIn Logo" width="16" height="16">
+            </a>
+        </div>
+
+        <!-- Footer Text -->
+        <div class="copy-box">
+            <strong>WDD231 Chamber of Commerce Project</strong>
+            <p>Developed by <strong>Marco Sandoval</strong></p>
+            <p>&copy; <span id="current-year"></span> Mesa Chamber of Commerce</p>
+            <p id="last-modified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>

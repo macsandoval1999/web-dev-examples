@@ -1,0 +1,103 @@
+main {
+    margin: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Acme", Arial, sans-serif;
+    font-size: 1rem;
+}
+
+h2 {
+    margin-top: 2rem;
+    border-top: 2px solid #000;
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+
+p {
+    margin: 1rem;
+}
+
+strong {
+    font-family: "Consolas", monospace;
+}
+
+code,
+.output {
+    font-family: "Consolas", monospace;
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 0.5rem;
+    display: inline-block;
+}
+
+code {
+    background-color: #ffffff;
+}
+
+output {
+    background-color: rgb(255, 255, 255);
+}
+
+table {
+    border-collapse: collapse;
+    margin: 1rem;
+    background-color: rgb(255, 255, 255);
+}
+
+th,
+td {
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.given {
+    background-color: rgb(255, 255, 255);
+}
+
+.solution {
+    background-color: rgb(255, 255, 255);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    justify-content: start;
+}
+
+nav span {
+    flex: 1 1 auto;
+}
+
+nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+    border: 1px solid rgb(0 0 0 / 10%);
+    border-radius: 0.5rem;
+    width: 80px;
+    text-align: center;
+}
+
+a:hover {
+    color: #ffffff;
+    background-color: rgb(0, 0, 0);
+}
+
+.example {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(183, 183, 183);
+    padding: 1rem;
+    margin: 1rem;
+    width: 50%;
+}

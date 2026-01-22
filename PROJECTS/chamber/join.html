@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join | Mesa Chamber of Commerce</title>
+    <meta name="description" content="Join the Mesa Chamber of Commerce and become part of a thriving community of local businesses and organizations.">
+    <meta name="author" content="Marco Sandoval">
+
+    <!-- Social Media Meta Tags are meta tags that are used to control how your content appears when shared on social media platforms -->
+    <!-- property= og:____     This is the Facebook Open Graph meta tag -->
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Join | Mesa Chamber of Commerce">
+    <!-- meta property="og:title", this is the title of the page -->
+    <meta property="og:description" content="Join the Mesa Chamber of Commerce and become part of a thriving community of local businesses and organizations.">
+    <!-- meta property="og:description", this is the description of the page -->
+    <meta property="og:image" content="https://macsandoval1999.github.io/wdd231/chamber/images/preview.jpg">
+    <!-- meta property="og:image", this is the image that will be displayed when the page is shared -->
+    <meta property="og:url" content="https://macsandoval1999.github.io/wdd231/chamber/join.html">
+    <!-- meta property="og:url", this is the URL of the page -->
+    <meta property="og:type" content="website"> <!-- meta property="og:type", this is the type of the page -->
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Script Files -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/membership-modal.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ***************Header*************** -->
+    <header>
+        <!-- Logo Box -->
+        <div class="logo-box">
+            <img src="images/mesa-logo.webp" alt="Mesa Chamber of Commerce Logo" width="200" height="200">
+            <h1>Mesa Chamber of Commerce</h1>
+        </div>
+
+        <!-- Hamburger Menu Button -->
+        <button id="ham-btn" class="hamburger" aria-label="menu toggle"></button>
+
+        <!-- ************Navigation**************** -->
+        <!-- navigation menu -->
+        <nav>
+            <ul id="nav-bar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li class="current"><a href="#">Join</a></li>
+                <li><a href="discover.html">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ********************Main***************** -->
+    <main class="join-menu">
+        <div class ="section-header">
+            <h2>Member Application</h2>
+            <p>Please fill out the form below to become a member of the Mesa Chamber of Commerce.</p>
+        </div>
+
+        <form method="GET" action="thankyou.html" class="member-form">
+            
+            <!-- Applicant's Information -->
+            <fieldset>
+                <legend>Applicant's Information</legend>
+                <!-- First Name -->
+                <label>First Name <input type="text" name="firstName" id="firstName" required autocomplete="given-name" title="First Name (Only letters allowed)" pattern="[A-Za-z]+">
+                </label>
+                <!-- [A-Za-z] means any uppercase or lowercase letter. The + means one or more of the preceding element -->
+
+                <!-- Last Name -->
+                <label>Last Name <input type="text" name="lastName" id="lastName" required autocomplete="family-name" title="Last Name (Only letters allowed)" pattern="[A-Za-z]+">
+                </label>
+
+                <!-- Organizational Title -->
+                <label>Organization Title <input type="text" name="orgTitle" id="orgTitle" required autocomplete="organization-title" title="Org. Title (7 Characters Minimum)" pattern="[A-Za-z\s-]{7,}" placeholder="Manager">
+                </label>
+                <!-- [A-Za-z] means any uppercase or lowercase letter for the first character. [A-Za-z]{5,} means at least 1 letters between the first and last character. [A-Za-z] means any uppercase or lowercase letter for the last character. -->
+            </fieldset>
+
+            <!-- Contact Information -->
+            <fieldset>
+                <legend>Contact Information</legend>
+                <!-- Email -->
+                <label>Email <input type="email" name="email" id="email" required autocomplete="email" title="Your Email Address" placeholder="example@example.com">
+                </label>
+                <!-- Phone Number -->
+                <label>Phone Number <input type="tel" name="phone" id="phone" required autocomplete="tel" title="Your Phone Number" pattern="\(\d{3}\) \d{3}-\d{4}" placeholder="(123) 456-7890">
+                </label>
+                <!-- pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" means the phone number must be in the format of: 
+                [minimum three numbers between 0-9]-[minimum three numbers between 0-9]-[minimum four numbers between 0-9] -->
+            </fieldset>
+
+            <!-- Business Information -->
+            <fieldset>
+                <legend>Business Information</legend>
+                <!-- Organization Name -->
+                <label>Organization Name <input type="text" name="orgName" id="orgName" required autocomplete="organization" title="Organization Name (5-75 Characters)" pattern=".{5,75}">
+                </label>
+                <!-- pattern=".{5,75}" means any character (.) with a minimum of 5 characters and a maximum of 75 characters -->
+                <!-- Business Type -->
+                <label>Business Type
+                    <select name="businessType" id="businessType" required>
+                        <option value="" disabled selected>Select a business type &#9207;</option>
+                        <option value="Retail">Retail</option>
+                        <option value="Service">Service</option>
+                        <option value="Manufacturing">Manufacturing</option>
+                        <option value="Non-Profit">Non-Profit</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </label>
+                <!-- Business Description -->
+                <label>Business Description 
+                    <textarea name="businessDescription" required title="Describe your business (10-200 characters)" minlength="10" maxlength="500" placeholder="Describe your business here..."></textarea>
+                </label>
+            </fieldset>
+
+            <!-- Membership Level -->
+            <fieldset>
+                <legend>Membership</legend>
+            
+                <!-- Membership Options -->
+                <div class="membership-options">
+                    <label><input type="radio" name="membershipLevel" value="NP"> Non-Profit Membership</label>
+                    <label><input type="radio" name="membershipLevel" value="Bronze" checked> Bronze Membership - $1000/year</label>
+                    <label><input type="radio" name="membershipLevel" value="Silver"> Silver Membership - $2500/year</label>
+                    <label><input type="radio" name="membershipLevel" value="Gold"> Gold Membership - $5000/year</label>
+                </div>
+            </fieldset>
+
+            <!-- Hidden Timestamp -->
+            <input type="hidden" name="timestamp" id="timestamp">
+
+            <!-- Submit Button -->
+            <input type="submit" value="Request Membership">
+        </form>
+
+        <!-- Membership Level Information -->
+         <div class="member-level-box">
+            <h2>Membership Information</h2>
+            <ul>
+                <li class="np">
+                    <p>Non-Profit Membership</p>
+                    <button class="show-modal" id="np-modal" type="button">Learn More</button>
+                </li>
+                <li class="bronze">
+                    <p>Bronze Membership</p>
+                    <button class="show-modal" id="bronze-modal" type="button">Learn More</button>
+                </li>
+                <li class="silver">
+                    <p>Silver Membership</p>
+                    <button class="show-modal" id="silver-modal" type="button">Learn More</button>
+                </li>
+                <li class="gold">
+                    <p>Gold Membership</p>
+                    <button class="show-modal" id="gold-modal" type="button">Learn More</button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Modal for Membership Information -->
+         <dialog id="membership-dialog">
+            <div class="modal-header">
+                <h2 id="membership-name">_blank</h2>
+                <button id="close-modal">X</button>
+            </div>
+            <div class="modal-content">
+                <h3>Price:</h3>
+                <p id="membership-price"></p>
+                <h3>Description:</h3>
+                <p id="membership-description"></p>
+                <h3>Benefits:</h3>
+                <ul id="membership-benefits">
+                </ul>
+            </div>
+         </dialog>
+
+    </main>
+
+    <!-- ***************Footer*************** -->
+    <footer>
+        <div class="info-box">
+            <strong>Mesa Chamber of Commerce</strong>
+            <p>123 Main Street</p>
+            <p>Mesa, AZ 85201</p>
+            <p>Phone: (480) 123-4567</p>
+            <p>Email: info@mesachamber.com</p>
+        </div>
+
+        <!-- Media Bar -->
+        <div class="media-bar">
+            <a href="https://www.facebook.com/profile.php?id=100089012599040&sk=about_contact_and_basic_info"
+                target="_blank">
+                <img src="images/facebook.svg" alt="Facebook Logo" width="16" height="16">
+            </a>
+            <a href="https://www.instagram.com/i.am_chiaro?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank">
+                <img src="images/instagram.svg" alt="Instagram Logo" width="16" height="16">
+            </a>
+            <a href="https://github.com/macsandoval1999/wdd231" target="_blank">
+                <img src="images/github.svg" alt="GitHub Logo" width="16" height="16">
+            </a>
+            <a href="https://www.linkedin.com/in/marcosandoval1999/" target="_blank">
+                <img src="images/linkedin.svg" alt="LinkedIn Logo" width="16" height="16">
+            </a>
+        </div>
+
+        <!-- Footer Text -->
+        <div class="copy-box">
+            <strong>WDD231 Chamber of Commerce Project</strong>
+            <p>Developed by <strong>Marco Sandoval</strong></p>
+            <p>&copy; <span id="current-year"></span> Mesa Chamber of Commerce</p>
+            <p id="last-modified"></p>
+        </div>
+    </footer>
+</body>
+
+</html>

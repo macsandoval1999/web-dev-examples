@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<!--****************
+ HEAD SECTION
+*****************-->
+<head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Blacktop Automotives</title>
+    <meta name="description" content="High-quality automotive services. High-end cars, affordable prices, and expert mechanics. Check out our inventory and services today!">
+    <meta name="author" content="Marco Sandoval">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Home | Blacktop Automotives">
+    <meta property="og:description" content="High-quality automotive services. High-end cars, affordable prices, and expert mechanics. Check out our inventory and services today!">
+    <meta property="og:image" content="https://macsandoval1999.github.io/wdd231/final/images/preview.jpg">
+    <meta property="og:url" content="https://macsandoval1999.github.io/wdd231/final/index.html">
+    <meta property="og:type" content="website">
+
+    <!-- Instagram Meta Tags -->
+    <meta name="instagram:title" content="Home | Blacktop Automotives">
+    <meta name="instagram:description" content="High-quality automotive services. High-end cars, affordable prices, and expert mechanics. Check out our inventory and services today!">
+    <meta name="instagram:image" content="https://macsandoval1999.github.io/wdd231/final/images/preview.jpg">
+    <meta name="instagram:url" content="https://macsandoval1999.github.io/wdd231/final/index.html">
+    <meta name="instagram:type" content="website">
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Script Files -->
+    <script src="scripts/nav-n-footer.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+
+
+
+<!--****************
+BODY SECTION
+*****************-->
+<body>
+    <header>
+        <a href="index.html"><img src="images/logo.svg" alt="Blacktop Automotives Logo" width="150" height="150"></a>
+        <h1>Blacktop Automotives</h1>
+        <nav>
+            <ul>
+                <li class="current-page"><a href="index.html">Home</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="scheduling.html">Services</a></li>
+            </ul>
+        </nav>
+        <a id="menu" href="#" aria-label="Menu"></a>
+    </header>
+
+
+
+    <main>
+        <section class="hero-container" aria-label="Hero Section">
+            <picture>
+                <source media="(min-width: 1025px)" srcset="images/hero-large.webp" width="1200" height="675">
+                <source media="(min-width: 601px)" srcset="images/hero-med.webp" width="800" height="450">
+                <img src="images/hero-small.webp" alt="A Ford Mustand 1969 in a dark garage with lights shining on it" width="320" height="180" loading="lazy"> 
+            </picture>
+            <div class="hero-text">
+                <h2>Dream Car? We have it<span class="highlight">.</span></h2>
+                <p>Discover your perfect ride with Blacktop Automotives.</p>
+                <a href="inventory.html" class="hero-button">Explore Inventory</a>
+            </div>
+        </section>
+    
+        <section class="intro-section">
+            <h2 class="section-title">Welcome to Blacktop Automotives</h2>
+            <div class="intro-container">
+                <p><strong>About Us:<br></strong>At Blacktop Automotives, we specialize in high-quality automotive services for a wide range of vehicles. Whether you're looking for a classic car restoration or routine maintenance, our expert mechanics are here to help.</p>
+                <div class="intro-card mechanic-img">
+                    <div class="intro-card-header">
+                        <h3>Expert Mechanics</h3>
+                    </div>
+                    <picture>
+                        <source media="(min-width: 600px)" srcset="images/mechanic-large.webp" width="600" height="400">
+                        <img src="images/mechanic-small.webp" alt="A mechanic working on a car engine" width="300" height="200" loading="lazy">
+                    </picture>
+                    <div class="intro-card-caption">
+                        <p>Dedicated to providing top-notch service.</p>
+                    </div>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-card-header cars-img">
+                        <h3>Extensive Inventory</h3>
+                    </div>
+                    <picture>
+                        <source media="(min-width: 600px)" srcset="images/cars-large.webp" width="600" height="400">
+                        <img src="images/cars-small.webp"  alt="A car lot with various cars on display" width="300" height="200" loading="lazy">
+                    </picture>
+                    <div class="intro-card-caption">
+                        <p>Explore our extensive inventory of high-end vehicles.</p>
+                    </div>
+                </div>
+                <div class="intro-card">
+                    <div class="intro-card-header sales-img">
+                        <h3>Financial Advisors</h3>
+                    </div>
+                    <picture>
+                        <source media="(min-width: 600px)" srcset="images/sales-large.webp" width="600" height="400">
+                        <img src="images/sales-small.webp" alt="Financial advisor talking with customers" width="300" height="200" loading="lazy">
+                    </picture>
+                    <div class="intro-card-caption">
+                        <p>We'll help you navigate your financing options.</p>
+                    </div>
+                </div>
+                <div class="intro-card customers-img">
+                    <div class="intro-card-header">
+                        <h3>Satisfaction Guaranteed</h3>
+                    </div>
+                    <picture>
+                        <source media="(min-width: 600px)" srcset="images/customers-large.webp" width="600" height="400">
+                        <img src="images/customers-small.webp"  alt="A couple of happy customers in their new car" width="300" height="200" loading="lazy">
+                    </picture>
+                    <div class="intro-card-caption">
+                        <p>Join our community of satisfied customers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="call-to-action-section">
+            <h2 class="section-title">Ready to Find Your Dream Car?</h2>
+            <div class="contact-us">
+                <h3>Contact Us</h3>
+                <p>Contact us today to schedule a test drive or learn more about our services. Our team is here to assist you every step of the way.</p>            
+                <a href="scheduling.html">Schedule a Test Drive</a>
+            </div>
+            <div class="visit-us">
+                <h3>Visit Us</h3>
+                <p>Come pay us a visit! We are open all week from 9am to 9pm.</p>
+                <address>
+                    123 E Dealer Road<br>
+                    Mesa, AZ 85205
+                </address>
+                <p>(480) 123-4567<br>
+                <iframe title="Fake Map Location for Blacktop Automotives"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18844.808394442603!2d-111.69973931948164!3d33.38873773347337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872bafb308c43e9d%3A0x1a5221c900132180!2sHonda%20of%20Superstition%20Springs!5e0!3m2!1sen!2sus!4v1765243449889!5m2!1sen!2sus" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="info-box">
+            <strong>Blacktop Automotives</strong>
+            <address>
+                123 E Dealer Road<br>
+                Mesa, AZ 85205
+            </address>
+            <p>Email: info@blacktopautomotives.com</p>
+        </div>
+    
+        <!-- Media Bar -->
+        <div class="media-bar">
+            <a href="https://www.facebook.com/profile.php?id=100089012599040&sk=about_contact_and_basic_info"
+                target="_blank">
+                <img src="images/facebook.svg" alt="Facebook Logo" width="16" height="16">
+            </a>
+            <a href="https://www.instagram.com/i.am_chiaro?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank">
+                <img src="images/instagram.svg" alt="Instagram Logo" width="16" height="16">
+            </a>
+            <a href="https://github.com/macsandoval1999/wdd231" target="_blank">
+                <img src="images/github.svg" alt="GitHub Logo" width="16" height="16">
+            </a>
+            <a href="https://www.linkedin.com/in/marcosandoval1999/" target="_blank">
+                <img src="images/linkedin.svg" alt="LinkedIn Logo" width="16" height="16">
+            </a>
+        </div>
+    
+        <!-- Footer Text -->
+        <div class="copy-box">
+            <strong>WDD231 Final Project</strong>
+            <p>Developed by <strong>Marco Sandoval</strong></p>
+            <p>&copy; <span id="current-year"></span> Blacktop Automotives</p>
+            <p id="last-modified"></p>
+            <a class="project-link" href="attributions.txt" target="_blank">Attributions</a>
+            <a class="project-link" href="videolink" target="_blank">Video Presentation</a>
+        </div>
+    </footer>
+</body>
+</html>

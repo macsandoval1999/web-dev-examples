@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/form-input.css">
+</head>
+<body>
+    <main>
+        <h1>Form Input Pattern Attribute Testing</h1>
+        <p>1️⃣ In the HTML panel, enter a valid, input pattern.<br> The default pattern is 6 to 10 characters inclusive with
+            at least one number,<br> one special character, one upper case and one lower case.</p>
+        <p>2️⃣ In the preview panel, enter a test value in the input field.</p>
+        <p>
+            3️⃣ The input text and border will be green if the input meets the requirements of the pattern.
+        </p>
+        <hr>
+        <form>
+            <label for="test">Enter Test Characters: </label>
+            <input type="text" id="test" name="test"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{6,10}$"
+                title="6 to 10 characters inclusive with at least one number, one special character, one upper case and one lower case letter.">
+                <!-- (?=.*[a-z]) means at least one lowercase letter -->
+                <!-- (?=.*[A-Z]) means at least one uppercase letter -->
+                <!-- (?=.*\d) means at least one digit -->
+                <!-- (?=.*[!@#$%^&*]) means at least one special character -->
+                <!-- [A-Za-z\d!@#$%^&*] means any letter (upper or lower case), digit, or special character -->
+                <!-- {6,10} means between 6 and 10 characters long -->
+        </form>
+    </main>
+</body>
+</html>

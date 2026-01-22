@@ -1,0 +1,222 @@
+@media only screen and (min-width: 630px) {
+    header {
+        grid-template-columns: 2fr 1fr; /* Change to two columns since the hamburger is hidden and the third column is no longer needed */
+    }
+
+    .hamburger {
+        display: none; /* Hide hamburger button on larger screens */
+    }
+    nav {
+        display: block; /* Show navigation menu on larger screens */
+        grid-column: 2 / 3; /* Position navigation in the second column */;
+        border: none; /* Remove border for larger screens */
+    }
+
+    #nav-bar {
+        display: flex; /* Use flexbox to layout navigation links horizontally */
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        max-width: 600px;
+    }
+    #directory.grid {
+        max-width: 990px;
+    }
+    #directory.list section {
+        margin: 0.2rem auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr 20px;
+        max-width: 990px;
+    }
+    #directory.list section, #directory.list section h2 {
+        font-size: 0.9rem;
+    }
+    footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+    footer .info-box, footer .copy-box {
+        font-size: 1rem;
+    }
+    #current-year, #last-modified {
+        font-size: 1rem;
+    }
+    .media-bar {
+        justify-content: space-between;
+        width: 25%;
+        min-width: 200px;
+    }
+    .mesa-info {
+        grid-template-columns: repeat(auto-fit, minmax(404px, 1fr));
+    }
+    .member-form input[type="text"]:hover,
+    .member-form input[type="email"]:hover,
+    .member-form input[type="tel"]:hover,
+    .member-form select:hover,
+    .member-form textarea:hover {
+        border-color: #6b6b6b;
+        transition: all 0.1s ease-in-out;
+    }
+    .place-card hr {
+        display: none;
+    }
+    .place-card {
+        grid-template-areas: 
+            "image name"
+            "image address"
+            "image cost"
+            "image description"
+            "image button"
+        ;
+        grid-template-columns: 1fr 1fr;
+    }
+    .place-card:hover {
+        transform: scale(1.02);
+    }
+    .place-card img {
+        height: 100%;
+        width: 100%;
+        opacity: 0.5; /* Initial opacity for hover effect */
+    }
+    .place-card img:hover {
+        opacity: 1;
+        /* Full opacity on hover */
+        transition: opacity 0.3s ease;
+    }
+    .place-card hr {
+        display: none;
+    }
+
+    .place-card {
+        grid-template-areas:
+            "image name"
+            "image address"
+            "image cost"
+            "image description"
+            "image button"
+        ;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .place-card img {
+        height: 100%;
+        width: 100%;
+    }
+    .place-card button {
+        transition: all 0.3s ease;
+    }
+    .place-card button:hover {
+        background-color: var(--secondary-color);
+        transition: background-color 0.1s ease;
+    }
+}
+@media only screen and (min-width: 800px) {
+    .logo-box h1 {
+        font-size: 1.5rem;
+        /* Increase logo text size for larger screens */
+    }
+    .welcome-box {
+        /* Increase padding for welcome box on larger screens */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .welcome-box h2 {
+        font-size: 2.5rem;
+        /* Increase welcome heading size for larger screens */
+    }
+    .welcome-box p {
+        font-size: 1.2rem;
+        /* Increase welcome paragraph size for larger screens */
+    }
+    
+}
+
+@media only screen and (min-width: 1000px) {
+    .join-menu {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        max-width: 1000px;
+        padding: 0 1rem;
+        margin: 1rem auto;
+    }
+    .section-header {
+        grid-column: 1 / 3;
+        margin-bottom: 1rem;
+    }
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    .section-header p {
+        font-size: 1.2rem;
+    }
+    .member-form {
+        margin: 0;
+    }
+    .member-level-box {
+        margin: 0;
+        max-height: fit-content;
+        padding: 1rem;
+    }
+    .member-level-box h2 {
+        color: white;
+    }
+    .places-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* ************************JOIN PAGE Animation*********************** */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    .member-level-box {
+        animation: fadeIn 2s ease-in-out;
+    }
+
+
+
+    @keyframes slideInLeft {
+        0% {
+            translate: -150vw -20vh;
+            opacity: 0;
+        }
+        75% {
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    #np-modal, #silver-modal {
+        animation: slideInLeft 3s ease-in-out;
+    }
+
+
+
+    @keyframes slideInRight {
+        0% {
+            translate: 150vw -20vh;
+            opacity: 0;
+        }
+        75% {
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    #gold-modal, #bronze-modal {
+        animation: slideInRight 3s ease-in-out;
+    }
+}

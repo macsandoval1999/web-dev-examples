@@ -1,0 +1,34 @@
+<svg width="24" height="24" viewBox="150 180 700 320" xmlns="http://www.w3.org/2000/svg">
+  <title>Blacktop Automotives Logo</title>
+  <!-- Stylized car silhouette -->
+  <g fill="rgba(11, 27, 53, 1)">
+    <path d="M180 280
+             C240 250, 320 230, 420 230
+             C520 230, 600 250, 660 270
+             C690 280, 720 300, 760 310
+             C770 312, 780 312, 800 308
+             C805 307, 808 304, 810 300
+             C812 292, 810 285, 806 280
+             C790 258, 760 240, 720 225
+             C676 208, 640 198, 600 190
+             C552 180, 520 180, 480 186
+             C452 190, 430 198, 408 208
+             C392 216, 380 224, 360 232
+             C340 240, 320 246, 300 250
+             C270 256, 240 262, 210 270
+             C198 273, 188 275, 180 280 Z"/>
+    <!-- Windows line -->
+    <path d="M340 218 C380 202, 430 194, 480 192 C530 190, 580 198, 620 210 C650 220, 670 230, 690 242" fill="none" stroke="#0b1b35" stroke-width="10" stroke-linecap="round"/>
+    <!-- Headlight accent -->
+    <path d="M720 260 L750 250" stroke="#0b1b35" stroke-width="12" stroke-linecap="round"/>
+    <!-- Wheels -->
+    <circle cx="340" cy="310" r="26"/>
+    <circle cx="640" cy="320" r="28"/>
+  </g>
+
+  <!-- Text -->
+  <g fill="#0b1b35" font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="480" y="410" font-size="64" font-weight="700" letter-spacing="1.5">BLACKTOP</text>
+    <text x="480" y="460" font-size="36" font-weight="700" letter-spacing="1.2">AUTOMOTIVES</text>
+  </g>
+</svg>

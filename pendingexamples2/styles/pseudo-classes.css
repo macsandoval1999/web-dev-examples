@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* The :root pseudo-class in CSS targets the highest-level parent element in the document—usually the <html>element. It is commonly used to define global CSS variables (custom properties) that can be accessed anywhere in your stylesheet. Using :root ensures these variables are available globally.*/
+:root {
+    --bord: 1px solid #777;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Acme', sans-serif;
+}
+h1 {
+    margin: 0.75rem;
+}
+main {
+    margin: 0.5rem;
+    border: 1px solid rgb(0 0 0 / 0.1);
+    padding: 0.5rem;
+    background-color: #eee;
+}
+p {
+    margin: 1rem;
+}
+
+.datatable {
+    width: 200px;
+    margin-top: 2rem;
+}
+.row {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    align-items: center;
+    text-align: center;
+}
+.col {
+    padding: 0.5rem;
+    border-top: var(--bord);
+    border-left: var(--bord);
+}
+/* The :nth-child pseudo-class in CSS selects elements based on their position among siblings. You can use it to style specific children in a list,
+table, or any group of sibling elements. You can use formulas::nth-child(odd) — selects all odd-numbered children:nth-child(even) — selects all even-numbered children:nth-child(3n) — selects every third child It’s a powerful way to target and style elements based on their order in the DOM. */
+.col:nth-child(even) {
+    border-right: var(--bord);
+}
+/* The :last-child pseudo-class in CSS selects the last child element of its parent. It’s useful for styling only the final item in a group of siblings. */
+.row:last-child .col {
+    border-bottom: var(--bord);
+    background-color: #bbb;
+}
+
+/* The :active pseudo-class in CSS targets an element (like a link or button) when it is being activated by the user—typically,
+while it is being clicked or pressed. For example,
+when you click and hold a link,
+it is in the :active state until you release the mouse button. This allows you to style elements to give visual feedback during user interaction. */
+/* The :link pseudo-class in CSS targets anchor tags (<a>) that have an href attribute and have not yet been visited by the user. It allows you to style links that are in their default,
+unvisited state. */
+/* The :visited pseudo-class in CSS targets anchor tags (<a>) that the user has already visited (clicked and navigated to before). It allows you to style links differently after they have been visited. */
+a:active, a:visited, a:link {
+    color: navy;
+}
+/* The :hover pseudo-class in CSS targets an element when the user places their mouse pointer over it. It’s commonly used to change the appearance of links,
+buttons,
+or other elements when hovered. */
+a:hover {
+    color: purple;
+}
