@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API Examples and Notes</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Fetch API Examples and Notes</h1>
+    <section>
+        <h2>What are method, headers, and body?</h2>
+        <ul>
+            <li><strong>method</strong>: The HTTP method (GET, POST, PUT, PATCH, DELETE) tells the server what action to
+                perform.</li>
+            <li><strong>headers</strong>: Extra information sent with the request, like <code>Content-Type</code> or
+                authentication tokens.</li>
+            <li><strong>body</strong>: The data sent to the server (usually as a JSON string), used with POST, PUT,
+                PATCH.</li>
+        </ul>
+    </section>
+
+    <section>
+        <div class="example">
+            <h2>Fetch API Examples</h2>
+            <h3>1. Simple GET Request</h3>
+            <pre><code id="ex1"></code></pre>
+            <p>In this example, we fetch a single post from the JSONPlaceholder API using a GET request.</p>
+            <p>We are essentially retrieving data without sending any additional information in the request body.</p>
+            <p>We are telling the server: "Please send me the post with ID 1."</p>
+            <ul> 
+                <li>The <strong>method</strong> is implicitly GET (default for fetch).</li>
+                <li>No <strong>headers</strong> are needed for this simple request.</li>
+                <li>No <strong>body</strong> is sent since we are just retrieving data.</li>
+            </ul>
+        </div>
+
+        <div class="example">
+        <h3>2. POST Request with JSON Body</h3>
+        <pre><code id="ex2"></code></pre>
+        <p>In this example, we create a new post by sending a POST request to the JSONPlaceholder API.</p>
+        <p>We are sending data to the server to create a new resource.</p>
+        <p>We are telling the server: "Please create a new post with this title and body."</p>
+        <ul>
+            <li>The <strong>method</strong> is POST, indicating we want to create something new.</li>
+            <li><strong>headers</strong> include <strong>Content-Type: application/json</strong> to inform the server about
+                the data format.</li>
+            <li><strong>body</strong> contains the JSON string with the new post's details.</li>
+        </ul>
+        </div>
+        
+        <div class="example">
+            <h3>3. PUT Request to Update Data</h3>
+            <pre><code id="ex3"></code></pre>
+            <p>In this example, we update an existing post by sending a PUT request to the JSONPlaceholder API.</p>
+            <p>We are sending data to the server to replace the existing resource.</p>
+            <p>We are telling the server: "Please update the post with ID 1 to have this new title and body."</p>
+            <ul>
+                <li>The <strong>method</strong> is PUT, indicating we want to replace the existing resource.</li>
+                <li><strong>headers</strong> include <strong>Content-Type: application/json</strong> to inform the server about
+                    the data format.</li>
+                <li><strong>body</strong> contains the JSON string with the updated post's details.</li>
+            </ul>
+        </div>
+
+        <div class="example">
+            <h3>4. PATCH Request to Partially Update Data</h3>
+            <pre><code id="ex4"></code></pre>
+            <p>In this example, we partially update an existing post by sending a PATCH request to the JSONPlaceholder
+                API.</p>
+            <p>We are sending data to the server to modify part of the existing resource.</p>
+            <p>We are telling the server: "Please update the title of the post with ID 1."</p>
+            <ul>
+                <li>The <strong>method</strong> is PATCH, indicating we want to partially update the existing resource.</li>
+                <li><strong>headers</strong> include <strong>Content-Type: application/json</strong> to inform the server about
+                    the data format.</li>
+                <li><strong>body</strong> contains the JSON string with the fields to be updated.</li>
+            </ul>
+        </div>
+
+        <div class="example">
+            <h3>5. DELETE Request</h3>
+            <pre><code id="ex5"></code></pre>
+            <p>In this example, we delete an existing post by sending a DELETE request to the JSONPlaceholder API.</p>
+            <p>We are instructing the server to remove a resource.</p>
+            <p>We are telling the server: "Please delete the post with ID 1."</p>
+            <ul>
+                <li>The <strong>method</strong> is DELETE, indicating we want to remove the resource.</li>
+                <li>No <strong>headers</strong> are needed for this simple request.</li>
+                <li>No <strong>body</strong > is sent since we are just instructing the server to delete the resource.</li>
+            </ul>
+        </div>
+
+        <div class="example">
+            <h3>6. GET Request with API Key</h3>
+            <pre><code id="ex6"></code></pre>
+            <p>Some APIs require an API key for authentication. This key is usually sent in the request headers.</p>
+            <ul>
+                <li>The <strong>method</strong> is GET, but you can use any method as required by the API.</li>
+                <li><strong>headers</strong> include <strong>Authorization: Bearer YOUR_API_KEY_HERE</strong> (or sometimes
+                    <strong>x-api-key</strong> or another custom header, depending on the API).</li>
+                <li>No <strong>body</strong> is sent for a GET request.</li>
+            </ul>
+            <p><strong>Note:</strong> Replace <strong>YOUR_API_KEY_HERE</strong> with your actual API key and
+                <strong>https://api.example.com/data</strong> with the real API endpoint.</p>
+        </div>
+    </section>
+</body>
+
+</html>

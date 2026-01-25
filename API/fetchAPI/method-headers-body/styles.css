@@ -1,0 +1,19 @@
+.example {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    background-color: #ebebeb;
+}
+
+pre {
+    background-color: #707070;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+code {
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+}
