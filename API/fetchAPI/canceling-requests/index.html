@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Canceling a Fetch Request</h1>
+    <section>
+        <h2>How to Cancel a Fetch Request</h2>
+        <p>Sometimes, you may want to cancel a fetch request before it completes, for example, if the user navigates
+            away from the page or if the request is taking too long.</p>
+        <p>This can be achieved using the AbortController API, which allows you to abort one or more DOM requests as and when desired.</p>
+        <p>Here, we are telling the server to fetch a list of photos. This is a simple fetch request that uses the GET method by default.</p>
+        <p>Fetching a list of photos from the server can sometimes take time, and you might want to cancel the request if it's no longer needed.</p>
+        <p>In our eventListener for the "Start Fetch" button, we create an AbortController and pass its signal to the fetch request. If the "Cancel Fetch" button is clicked, we call the abort method on the controller to cancel the request. This will cause the fetch promise to reject with an AbortError. It only works if the fetch request is still pending. If clicked while the fetch is complete, it has no effect. If clicked before the fetch starts, it also has no effect.</p>
+        <ul>
+            <li>Use <strong>AbortController</strong> to cancel a fetch request before it completes.</li>
+            <li>Create an <code>AbortController</code> and pass its <code>signal</code> property to the fetch options.
+            </li>
+            <li>Call <code>controller.abort()</code> to cancel the request. The fetch promise will reject with an
+                <code>AbortError</code>.</li>
+        </ul>
+
+        <h3>Example Code</h3>
+        <div class="example">
+            <pre><code id="example"></code></pre>
+            <button id="start-fetch">Start Fetch</button>
+            <button id="cancel-fetch">Cancel Fetch</button>
+            <div id="output"></div>
+        </div>
+    </section>
+</body>
+
+</html>

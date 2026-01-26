@@ -1,0 +1,14 @@
+.example {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+pre code {
+    display: block;
+    background-color: #272822;
+    color: #f8f8f2;
+    padding: 10px;
+    overflow-x: auto;
+}

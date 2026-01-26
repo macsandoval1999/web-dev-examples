@@ -1,0 +1,17 @@
+.example {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background-color: black;
+}
+.example pre {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    overflow-x: auto;
+}
+#output {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #e8e8e8;
+    border: 1px solid #ccc;
+    color: green;
+}
