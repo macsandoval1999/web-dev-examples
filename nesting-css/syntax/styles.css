@@ -1,0 +1,87 @@
+/* Example 1:  */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+            color: yellow;
+        }
+    }
+    p {
+        font-size: smaller;
+    }
+    @media (max-width: 600px) {
+        background-color: #444;
+        padding: 10px;
+        font-size: smaller;
+        a {
+            font-size: small;
+            &:hover {
+                color: orange;
+            }
+        }
+        p {
+            font-size: x-small;
+        }
+    }
+}
+
+/*******************************************/
+
+/* Example 2: */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+
+    & a {
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+            color: yellow;
+        }
+    }
+
+    & p {
+        font-size: smaller;
+    }
+    @media (max-width: 600px) {
+        background-color: #444;
+        padding: 10px;
+        font-size: smaller;
+
+        a {
+            font-size: small;
+
+            &:hover {
+                color: orange;
+            }
+        }
+
+        p {
+            font-size: x-small;
+        }
+    }
+}
+
+
+
+/* Both examples are valid CSS nesting,
+but the first example is more correct and idiomatic for native CSS nesting: In native CSS nesting,
+you do not need to use the ampersand (&) before child selectors like a or p. The ampersand is only needed when you want to reference the parent selector directly (e.g., for pseudo-classes or combinators). So,
+the first example is preferred and more readable. The second example works,
+but the & before a and p is unnecessary. */
