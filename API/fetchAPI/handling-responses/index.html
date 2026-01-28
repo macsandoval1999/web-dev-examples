@@ -36,23 +36,28 @@
             <p><strong>Why is this important?</strong> If you don't check the status, your code might try to use data
                 that doesn't exist, causing bugs or confusing your users. Always check the status before using the
                 response data!</p>
-            <p><strong>Expected Response:</strong> You should see a JSON object representing a single post (with fields like userId, id, title, and body) displayed in the output area. If the request fails, you'll see an error message with the HTTP status code.</p>
+            <p><strong>Expected Response:</strong> You should see a JSON object representing a single post (with fields
+                like userId, id, title, and body) displayed in the output area. If the request fails, you'll see an
+                error message with the HTTP status code.</p>
         </div>
 
         <div class="example">
             <h3>2. Checking the Response Type</h3>
             <pre><code id="type-example"></code></pre>
             <strong>Response</strong>
-                <pre><code id="output2"></code></pre>
-                <p><strong>What is response type?</strong> The response type tells you how the browser got the data. It
-                    can be <code>basic</code> (same origin), <code>cors</code> (cross-origin with permission),
-                    <code>opaque</code> (cross-origin without permission), or <code>error</code>.</p>
-                <p><strong>Why check it?</strong> Sometimes, you need to know if you have full access to the data or if
-                    there are restrictions. For example, an <code>opaque</code> response means you can't see the data
-                    inside, just that the request happened.</p>
-                <p><strong>When is this useful?</strong> If your fetch isn't working as expected, checking the type can
-                    help you debug CORS issues or permissions problems.</p>
-                <p><strong>Expected Response:</strong> You should see a line like <code>Type: basic</code> in the output area, indicating the type of the response. For this example, it will usually be <code>basic</code> since the resource is from the same origin.</p>
+            <pre><code id="output2"></code></pre>
+            <p><strong>What is response type?</strong> The response type tells you how the browser got the data. It
+                can be <code>basic</code> (same origin), <code>cors</code> (cross-origin with permission),
+                <code>opaque</code> (cross-origin without permission), or <code>error</code>.
+            </p>
+            <p><strong>Why check it?</strong> Sometimes, you need to know if you have full access to the data or if
+                there are restrictions. For example, an <code>opaque</code> response means you can't see the data
+                inside, just that the request happened.</p>
+            <p><strong>When is this useful?</strong> If your fetch isn't working as expected, checking the type can
+                help you debug CORS issues or permissions problems.</p>
+            <p><strong>Expected Response:</strong> You should see a line like <code>Type: basic</code> in the output
+                area, indicating the type of the response. For this example, it will usually be <code>basic</code> since
+                the resource is from the same origin.</p>
         </div>
 
         <div class="example">
@@ -64,10 +69,12 @@
                 things like what type of data you got (<code>Content-Type</code>), how big it is, or who sent it.</p>
             <p><strong>How do you use them?</strong> You can read headers to decide how to handle the data. For example,
                 if <code>Content-Type</code> is <code>application/json</code>, you know to use
-                <code>response.json()</code> to read it.</p>
+                <code>response.json()</code> to read it.
+            </p>
             <p><strong>Why are headers important?</strong> Headers help your code adapt to different kinds of responses
                 and can be used for security, caching, and more.</p>
-            <p><strong>Expected Response:</strong> You should see a list of all response headers, including <code>Content-Type: application/json; charset=utf-8</code> and others, displayed in the output area.</p>
+            <p><strong>Expected Response:</strong> You should see a list of all response headers, including
+                <code>Content-Type: application/json; charset=utf-8</code> and others, displayed in the output area.</p>
         </div>
 
         <div class="example">
@@ -79,10 +86,12 @@
                 posts, a user profile, or an image.</p>
             <p><strong>How do you read it?</strong> Use <code>response.json()</code> for JSON data,
                 <code>response.text()</code> for plain text, or <code>response.blob()</code> for files like images. Pick
-                the method that matches the <code>Content-Type</code> header.</p>
+                the method that matches the <code>Content-Type</code> header.
+            </p>
             <p><strong>Why does this matter?</strong> If you use the wrong method, your data might not be readable or
                 could cause errors. Always check the content type and use the right method!</p>
-            <p><strong>Expected Response:</strong> You should see a JSON object representing a single post, formatted for readability, in the output area.</p>
+            <p><strong>Expected Response:</strong> You should see a JSON object representing a single post, formatted
+                for readability, in the output area.</p>
         </div>
 
         <div class="example">
@@ -96,7 +105,8 @@
                 chunks. You can process each chunk as it arrives, instead of waiting for everything at once.</p>
             <p><strong>Why use streaming?</strong> It saves memory and makes your app feel faster, especially for large
                 downloads or real-time updates.</p>
-            <p><strong>Expected Response:</strong> You should see the entire JSON array of posts as a single large string in the output area. For large responses, this may take a moment to appear.</p>
+            <p><strong>Expected Response:</strong> You should see the entire JSON array of posts as a single large
+                string in the output area. For large responses, this may take a moment to appear.</p>
         </div>
 
         <div class="example">
@@ -110,7 +120,9 @@
                 it into lines and process them. Save any leftover part for the next chunk.</p>
             <p><strong>When is this useful?</strong> For very large files, or when you want to update your UI as new
                 lines come in, not just at the end.</p>
-            <p><strong>Expected Response:</strong> You should see the contents of the text file, line by line, in the output area. Each line from the file will be displayed on its own line. If there is a network or CORS error, you will see an error message instead.</p>
+            <p><strong>Expected Response:</strong> You should see the contents of the text file, line by line, in the
+                output area. Each line from the file will be displayed on its own line. If there is a network or CORS
+                error, you will see an error message instead.</p>
         </div>
 
         <div class="example">
@@ -124,7 +136,9 @@
                 it. You can't read it again from the start.</p>
             <p><strong>Why does this matter?</strong> If you try to read a locked or disturbed stream again, you'll get
                 errors. Always check the state if you need to reuse a stream or pass it somewhere else.</p>
-            <p><strong>Expected Response:</strong> You should see two lines in the output area: one showing <code>Locked: true</code> and one showing <code>Disturbed: true</code>, indicating the state of the stream after reading from it.</p>
+            <p><strong>Expected Response:</strong> You should see two lines in the output area: one showing
+                <code>Locked: true</code> and one showing <code>Disturbed: true</code>, indicating the state of the
+                stream after reading from it.</p>
 
         </div>
 
