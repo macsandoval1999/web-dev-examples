@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    height: 100vh;
+}
+main {
+    height: 100%;
+}
+.definitions {
+    text-align: center;
+    padding: 20px;
+}
+.box {
+    position: relative;
+    background-color: #4caf50;
+    width: 100px;
+    height: 100px;
+    margin: 150px auto;
+}
+
+img {
+    position: absolute;
+    /* transform: matrix(1, 2, 3, 4, 5, 6); */
+    /* transform: translate(120px, 50%); */
+    /* transform: scale(2, 0.5); */
+    /* transform: rotate(0.32turn); */
+    /* transform: skew(30deg, 20deg); */
+    transform: scale(0.5) translate(-100%, -100%);
+}
+

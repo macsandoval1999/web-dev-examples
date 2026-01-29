@@ -1,0 +1,541 @@
+h1 {
+    border-bottom: 5px solid black;
+    width: fit-content;
+}/*********************************/
+
+
+
+.keyframes-rule-ex1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: myAnimation1;
+    animation-duration: 4s;
+}
+@keyframes myAnimation1 {
+    from {
+        background-color: red;
+    }
+
+    to {
+        background-color: yellow;
+    }
+}/*********************************/
+
+
+
+.keyframes-rule-ex2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: myAnimation2;
+    animation-duration: 4s;
+}
+@keyframes myAnimation2 {
+    0% {
+        background-color: red;
+    }
+    25% {
+        background-color: yellow;
+    }
+    50% {
+        background-color: blue;
+    }
+    100% {
+        background-color: green;
+    }
+}/*********************************/
+
+
+
+.keyframes-rule-ex3 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: myAnimation3;
+    animation-duration: 4s;
+}
+@keyframes myAnimation3 {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+    }
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}/*********************************/
+
+
+
+.animation-delay-ex1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: myAnimation4;
+    animation-duration: 4s;
+    animation-delay: 2s;
+}
+@keyframes myAnimation4 {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+    }
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}/*********************************/
+
+
+
+.animation-delay-ex2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: myAnimation5;
+    animation-duration: 4s;
+    animation-delay: -2s;
+}
+@keyframes myAnimation5 {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+    }
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}/*********************************/
+
+
+
+.animation-iteration-count-ex1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: myAnimation6;
+    animation-duration: 4s;
+    animation-iteration-count: 3;
+}
+@keyframes myAnimation6 {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+    }
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}/*********************************/
+
+
+
+.animation-iteration-count-ex2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: myAnimation7;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes myAnimation7 {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+    }
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}/*********************************/
+
+
+
+.animation-direction-ex1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: myAnimation8;
+    animation-duration: 4s;
+    animation-direction: reverse;
+}
+@keyframes myAnimation8 {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+    }
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}/*********************************/
+
+
+
+.animation-direction-ex2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: myAnimation9;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+@keyframes myAnimation9 {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+    }
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}/*********************************/
+
+
+
+.animation-direction-ex3 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: myAnimation10;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-direction: alternate-reverse;
+}
+@keyframes myAnimation10 {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+    }
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}/*********************************/
+
+
+
+.atf {
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    font-weight: bold;
+    position: relative;
+    animation-name: myAnimation11;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+.animation-timing-function-ex1 {
+    animation-timing-function: linear;
+}
+.animation-timing-function-ex2 {
+    animation-timing-function: ease;
+}
+.animation-timing-function-ex3 {
+    animation-timing-function: ease-in;
+}
+.animation-timing-function-ex4 {
+    animation-timing-function: ease-out;
+}
+.animation-timing-function-ex5 {
+    animation-timing-function: ease-in-out;
+}
+@keyframes myAnimation11 {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 300px;
+    }
+}/*********************************/
+
+
+
+.animation-fill-mode-ex1 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation-name: myAnimation12;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes myAnimation12 {
+    from {
+        top: 0px;
+    }
+    to {
+        top: 200px;
+        background-color: blue;
+    }
+}/*********************************/
+
+
+
+.animation-fill-mode-ex2 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation-name: myAnimation13;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+@keyframes myAnimation13 {
+    from {
+        top: 0px;
+        background-color: yellow;
+    }
+    to {
+        top: 200px;
+    }
+}/*********************************/
+
+
+
+.animation-fill-mode-ex3 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation-name: myAnimation14;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+@keyframes myAnimation14 {
+    from {
+        top: 0px;
+        background-color: yellow;
+    }
+    to {
+        top: 200px;
+        background-color: blue;
+    }
+}/*********************************/
+
+
+
+.animation-shorthand-ex1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: myAnimation15;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes myAnimation15 {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+    }
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}/*********************************/
+
+
+
+.animation-shorthand-ex2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation: myAnimation16 5s linear 2s infinite alternate;
+}
+@keyframes myAnimation16 {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+    }
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}/*********************************/
