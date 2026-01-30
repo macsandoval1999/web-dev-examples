@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Difference between Function constructor and function declaration</h1>
+    <p>Functions created with the Function constructor do not create closures to their creation contexts; they always are
+    created in the global scope. When running them, they will only be able to access their own local variables and global
+    ones, not the ones from the scope in which the Function constructor was created. This is different from using eval()
+    with code for a function expression.</p>
+
+</body>
+</html>
