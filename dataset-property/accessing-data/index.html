@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Accessing Data Attributes</h1>
+    <h2>Questions to Consider</h2>
+    <ul>
+        <li><strong>What are the advantages of using data-* attributes in HTML?</strong></li>
+        <ul>
+            <li>Keep extra info close to the element it belongs to without extra JS objects.</li>
+            <li>Simple to read/write in JS via element.dataset.</li>
+            <li>Clean separation: you can style with classes and store data with data-*.</li>
+            <li>Works with static HTML and server-rendered pages.</li>
+        </ul>
+        <br>
+        <li><strong>How can data-* attributes enhance the accessibility of web applications?</strong></li>
+        <ul>
+            <li>Doesn’t add visible text, so you can enhance behavior without cluttering the UI.</li>
+            <li>Lets you map data to ARIA updates (e.g., use data to update aria-label or aria-live).</l>
+            <li>Helps keep the DOM semantic (you don’t need extra wrapper elements just to store data).</li>
+        </ul>
+        <br>
+        <li><strong>In what scenarios would you prefer using data-* attributes over other methods of storing data in HTML?</strong></li>
+        <ul>
+            <li>Small, element-specific metadata (IDs, categories, flags).</li>
+            <li>When you need data in HTML for progressive enhancement.</li>
+            <li>When a backend template can inject values directly into markup.</li>
+        </ul>
+        <br>
+        <li><strong>How can you ensure that the data stored in data-* attributes is valid and secure?</strong></li>
+        <ul>
+            <li>Treat data-* as untrusted input; validate in JS before using.</li>
+            <li>Only store non-sensitive info (no secrets or personal data).</li>
+            <li>Sanitize before inserting into the DOM (avoid innerHTML with raw data).</li>
+            <li>Use strict formats (e.g., JSON.parse with try/catch, number checks).</li>
+        </ul>
+    </ul>
+    <hr>
+    <ul id="items">
+        <li data-name="banana" data-category="fruit" data-color="yellow">Banana</li>
+        <li data-name="carrot" data-category="vegetable" data-color="orange">Carrot</li>
+        <li data-name="blueberry" data-category="fruit" data-color="blue">Blueberry</li>
+    </ul>
+</body>
+</html>
