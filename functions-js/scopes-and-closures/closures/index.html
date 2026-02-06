@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h2>Closures</h2>
+    <p>A closure is when a function remembers the variables from where it was created, even after that outer function is done.
+    It’s like a backpack: the function carries the values it needs so it can use them later.</p>
+    <p>We also refer to the function body as a closure. A closure is any piece of source code (most commonly, a function) that
+    refers to some variables, and the closure "remembers" these variables even when the scope in which these variables were
+    declared has exited.<br><br>
+    
+    Closures are usually illustrated with nested functions to show that they remember variables beyond the lifetime of its
+    parent scope; but in fact, nested functions are unnecessary. Technically speaking, all functions in JavaScript form
+    closures—some just don't capture anything, and closures don't even have to be functions. The key ingredients for a
+    useful closure are the following:<br><br>
+    <ul>
+        <li>A parent scope that defines some variables or functions. It should have a clear lifetime, which means it should finish
+        execution at some point. Any scope that's not the global scope satisfies this requirement; this includes blocks,
+        functions, modules, and more.</li><br>
+        <li>An inner scope defined within the parent scope, which refers to some variables or functions defined in the parent scope.</li><br>
+        <li>The inner scope manages to survive beyond the lifetime of the parent scope. For example, it is saved to a variable
+        that's defined outside the parent scope, or it's returned from the parent scope (if the parent scope is a function).</li><br>
+        <li>Then, when you call the function outside of the parent scope, you can still access the variables or functions that were
+        defined in the parent scope, even though the parent scope has finished execution.</li>
+    </ul>
+</body>
+</html>
