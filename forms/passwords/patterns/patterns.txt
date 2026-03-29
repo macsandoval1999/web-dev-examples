@@ -1,0 +1,7 @@
+pattern='^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$'
+Requires at least one uppercase letter, one digit, one special character, and at least 12 characters.
+
+
+
+pattern='^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[^a-zA-Z0-9])(?!.*\s).{12,}$'
+Requires at least one digit, one lowercase letter, one uppercase letter, one special character, at least 12 characters, and explicitly disallows whitespace.
